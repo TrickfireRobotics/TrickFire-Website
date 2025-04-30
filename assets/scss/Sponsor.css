@@ -16,6 +16,7 @@ main li,
 main p {
   margin: 1em 0;
 }
+
 main li a,
 main p a {
   color: rgb(0, 255, 0);
