@@ -5,6 +5,10 @@ import { links } from './Links'
 
 const date = new Date();
 
+/** 
+ * Footer component that renders the social media links and copyright information.
+ * @component
+*/
 export const Footer = () => {
     return (
         <footer className='footer' role="contentinfo">
