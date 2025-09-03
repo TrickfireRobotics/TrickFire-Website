@@ -1,4 +1,6 @@
 import './Footer.scss'
+import { GradientLine } from '../GradientLine/GradientLine';
+import { MaxWidthContainer } from '../MaxWidthContainer/MaxWidthContainer';
 import { links } from './Links'
 
 const date = new Date();
@@ -6,12 +8,12 @@ const date = new Date();
 export const Footer = () => {
     return (
         <footer className='footer' role="contentinfo">
-            <div className='gradient'></div>
-            <div className='max-width-container'>
+            <GradientLine/>
+            <MaxWidthContainer>
                 <nav aria-label='Social media links' className='social-nav'>
                     <ul className='social-list'>
                         {links.map(link => (
-                            <li key={link.url}>
+                            <li className="social-list-item" key={link.url}>
                                 <a 
                                 className='social-link'
                                 href={link.url}
@@ -26,7 +28,7 @@ export const Footer = () => {
                 </nav>
                 
                 <p className='copyright'>Copyright © {date.getFullYear()} TrickFire Robotics. All rights reserved. Bothell, WA.</p>
-            </div>
+            </MaxWidthContainer>
         </footer>
     )
 }
