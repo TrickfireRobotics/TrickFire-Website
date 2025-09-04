@@ -1,0 +1,147 @@
+@import '../../variables.scss';
+
+.imageRight, .imageLeft {
+    padding: 3rem;
+    width: 100%;
+    background: $EerieBlack;
+
+    .sideBySide {
+        width: 100%;
+        height: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .textSection, .imageSection {
+            width: 50%;
+            height: auto;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+
+            .subheader {
+                font-family: $font-heading;
+                font-size: 2rem;
+                color: $White;
+                padding-bottom: 0.25em;
+            }
+
+            .text {
+                font-family: $font-body;
+                font-size: 1rem;
+                color: $DarkWhite;
+                font-weight: 400;
+            }
+
+            .text a, .text a:visited {
+                color: $White;
+                text-decoration: underline;
+            }
+
+            .boxShadowImage {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.imageRight {
+    .textSection {
+        order: 0;
+    }
+
+    .imageSection {
+        order: 1;
+
+        .boxShadowImage {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+.imageLeft {
+    .textSection {
+        order: 1;
+    }
+
+    .imageSection {
+        order: 0;
+
+        .boxShadowImage {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imageRight, .imageLeft  {
+        padding: 3rem 0rem;
+        width: 100%;
+
+        .textSection {
+            order: 0;
+        }
+
+        .imageSection {
+            order: 1;
+        }
+
+        .sideBySide {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+
+            /*.subheaderAndUnderline {
+                order: 0;
+            }
+
+            .imageSection {
+                order: 1;
+            }
+
+            .textAndButton {
+                order: 2;
+            }*/
+        }
+
+        .textSection, .imageSection {
+            width: 85% !important;
+            margin-right: 3rem;
+            margin-left: 3rem;
+            display: block;
+
+            .subheader {
+                font-family: $font-heading;
+                font-size: 2rem;
+                color: $White;
+                padding-bottom: 0.25em;
+            }
+
+            .text {
+                font-family: $font-body;
+                font-size: 1rem;
+                color: $DarkWhite;
+                font-weight: 400;
+            }
+
+            .text a, .text a:visited {
+                color: $White;
+                text-decoration: underline;
+            }
+
+            .boxShadowImage {
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 3rem;
+                width: 100%;
+            }
+        }
+    }
+}
