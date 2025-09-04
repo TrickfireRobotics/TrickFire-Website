@@ -7,7 +7,7 @@ export const Homepage = () => {
         <main className='homepage'>
             <MaxWidthContainer>
                 <TextImage 
-                    imageOrder="imageLeft"
+                    imageOrder="imageRight"
                     subheader="Who Are We?" 
                     text="TrickFire is a student-led robotics team based in the University of Washington Bothell. Since TrickFire was founded in 2016 our goal has been enabling students to get real experience in engineering, marketing and leadership while having fun along the way." 
                     showButton={true}

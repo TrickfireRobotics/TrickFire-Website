@@ -2,6 +2,8 @@ import './GetInvolved.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
 
+const disciplines = ['Software Engineering', 'Mechanical Engineering', 'Electrical Engineering', 'Science', 'Marketing', 'Finance']
+
 export const GetInvolved = () => {
     return (
         <main className='get-involved'>
@@ -16,6 +18,17 @@ export const GetInvolved = () => {
                     imageSource="https://media.discordapp.net/attachments/598246036707999801/1291473213280358430/2401001A_029-5K.jpg?ex=68b9e028&is=68b88ea8&hm=b118ff817b52fef7a24d6dc51c8ca3c35668cc65a441e405ca93f24cc67bd408&=&width=1602&height=1068"
                     alternativeText="Four smiling students stand next to a rover at a crowded table excited to talk about their work." 
                 />
+
+                <div class="opportunitiesSection">
+                    <h1 class="largeItalicCenter">Opportunities In...</h1>
+                    <div class="disciplineList">
+                        {disciplines.map((item, index) => 
+                            <div class="discipline" key={index}>
+                                <h1>{item}</h1>
+                            </div>
+                        )}
+                    </div>
+                </div>
 
                 <TextImage 
                     imageOrder="imageRight"
