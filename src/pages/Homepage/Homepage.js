@@ -24,7 +24,7 @@ export const Homepage = () => {
                     showButton={true}
                     link="" 
                     buttonText="Join Us!" 
-                    imageSource="https://cdn.discordapp.com/attachments/1258621803811700778/1378147114541908080/20250530_155953.jpg?ex=68bac3c4&is=68b97244&hm=29c9a4c72332957337b79fb514331a43340a2603fdb0ab62c9711cc7d2ce7117&"
+                    imageSource="https://cdn.discordapp.com/attachments/541757191854751754/1375150190654394530/IMG_4570.jpeg?ex=68bb116a&is=68b9bfea&hm=6be72b6662b5fe0d4d95c508f6a1f644e5e6ee86df5364111ea093260f468866"
                     alternativeText="Six students smile behind a table with a rover, stickers, candy, and business cards." 
                 />
             </MaxWidthContainer>
