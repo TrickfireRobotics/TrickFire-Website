@@ -28,7 +28,7 @@
             border: 0.3rem solid $DarkWhite;
             box-shadow: 0.5rem 0.5rem $AccentPink;
             padding: .5rem;
-            margin: 2rem 1rem;
+            margin: 1rem 1rem;
 
             h1 {
                 color: $DarkWhite;
@@ -52,6 +52,7 @@
 
     .discipline {
         display: block !important;
+        margin: 2rem 1rem !important;
 
         h1 {
             font-size: 1.25rem !important;
