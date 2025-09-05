@@ -22,7 +22,7 @@ export const Homepage = () => {
                 <TextImage 
                     imageOrder="imageRight"
                     subheader="Join Us" 
-                    text="TrickFire’s mission is to give students hands-on experiences in a variety of fields. Joining TrickFire is a great way to gain real experience in engineering, software, marketing, leadership and more. No previous experience is needed, and new members are onboarded on a rolling basis." 
+                    text={["TrickFire’s mission is to give students hands-on experiences in a variety of fields. Joining TrickFire is a great way to gain real experience in engineering, software, marketing, leadership and more.", <br></br>, <br></br>,  "No previous experience is needed, and new members are onboarded on a rolling basis."]} 
                     showButton={true}
                     link="" 
                     buttonText="Join Us!" 

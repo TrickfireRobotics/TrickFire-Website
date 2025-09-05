@@ -39,6 +39,14 @@
                 text-decoration: underline;
             }
 
+            .text a:hover {
+                opacity: 90%;
+            }
+
+            ul {
+                padding-left: 1rem;
+            }
+
             .boxShadowImage {
                 width: 70%;
             }
