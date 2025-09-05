@@ -1,6 +1,8 @@
 import './GetInvolved.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import ClubFair from '../../assets/GetInvolved/clubFair.jpeg'
+import LabWithArm from '../../assets/GetInvolved/labWithArm.webp'
 
 const disciplines = ['Software Engineering', 'Mechanical Engineering', 'Electrical Engineering', 'Science', 'Marketing', 'Finance']
 
@@ -15,7 +17,7 @@ export const GetInvolved = () => {
                     showButton={true}
                     link="https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu" 
                     buttonText="Join Us!" 
-                    imageSource="https://media.discordapp.net/attachments/598246036707999801/1291473213280358430/2401001A_029-5K.jpg?ex=68b9e028&is=68b88ea8&hm=b118ff817b52fef7a24d6dc51c8ca3c35668cc65a441e405ca93f24cc67bd408&=&width=1602&height=1068"
+                    imageSource={ClubFair}
                     alternativeText="Four smiling students stand next to a rover at a crowded table excited to talk about their work." 
                 />
 
@@ -37,7 +39,7 @@ export const GetInvolved = () => {
                     showButton={true}
                     link="" 
                     buttonText="Sponsor Us!" 
-                    imageSource="https://www.trickfirerobotics.com/assets/images/photos/MentoringImage/MentoringImage-1920w.webp?width=1920" 
+                    imageSource={LabWithArm}
                     alternativeText="Three people, all in dark tops, observing a robotic arm on a wooden table." 
                 />
             </MaxWidthContainer>

@@ -1,6 +1,8 @@
 import './Homepage.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import March2025Outreach from '../../assets/Homepage/march2025Outreach.jpeg'
+import MarketingTeam from '../../assets/Homepage/marketingTeam.png'
 
 export const Homepage = () => {
     return (
@@ -13,7 +15,7 @@ export const Homepage = () => {
                     showButton={true}
                     link="" 
                     buttonText="About Us!" 
-                    imageSource="https://www.trickfirerobotics.com/assets/images/photos/MarketingTeam/MarketingTeam-1920w.webp?width=1920"
+                    imageSource={MarketingTeam}
                     alternativeText="Four students pose excitedly outside a building." 
                 />
 
@@ -24,7 +26,7 @@ export const Homepage = () => {
                     showButton={true}
                     link="" 
                     buttonText="Join Us!" 
-                    imageSource="https://cdn.discordapp.com/attachments/541757191854751754/1375150190654394530/IMG_4570.jpeg?ex=68bb116a&is=68b9bfea&hm=6be72b6662b5fe0d4d95c508f6a1f644e5e6ee86df5364111ea093260f468866"
+                    imageSource={March2025Outreach}
                     alternativeText="Six students smile behind a table with a rover, stickers, candy, and business cards." 
                 />
             </MaxWidthContainer>
