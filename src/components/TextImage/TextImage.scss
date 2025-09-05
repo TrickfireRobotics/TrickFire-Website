@@ -78,7 +78,24 @@
     }
 }
 
+.mobileImage {
+    display: none;
+}
+
+.desktopImage {
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
+    .desktopImage {
+        display: none;
+    }
+
+    .mobileImage {
+        display: block;
+        margin-bottom: 4rem;
+    }
+
     .imageRight, .imageLeft  {
         padding: 3rem 0rem;
         width: 100%;
@@ -96,18 +113,6 @@
             flex-wrap: wrap;
             flex-direction: column;
             width: 100%;
-
-            /*.subheaderAndUnderline {
-                order: 0;
-            }
-
-            .imageSection {
-                order: 1;
-            }
-
-            .textAndButton {
-                order: 2;
-            }*/
         }
 
         .textSection, .imageSection {

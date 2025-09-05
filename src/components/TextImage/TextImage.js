@@ -8,23 +8,25 @@ export const TextImage = (props) => {
         <div class={props.imageOrder}>
             <div class="sideBySide">
                 <div class="textSection">
-                    <div class="subheaderAndUnderline">
-                        <h2 class="subheader">{props.subheader}</h2>
-                        <GradientLine />
+                    <h2 class="subheader">{props.subheader}</h2>
+                    <GradientLine />
+
+                    <br class="desktopImage"></br>
+
+                    <div class="mobileImage">
+                        <BoxShadowImage class="boxShadowImage" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
                     </div>
 
+                    <p class="text">{props.text}</p>
                     <br></br>
-
-                    <div class="textAndButton">
-                        <p class="text">{props.text}</p>
-                        <br></br>
-                        <br></br>
-                        {props.showButton && <Button link={props.link} buttonText={props.buttonText}/>}
-                    </div>
+                    <br></br>
+                    {props.showButton && <Button link={props.link} buttonText={props.buttonText}/>}
                 </div>
 
                 <div class="imageSection">
-                    <BoxShadowImage class="boxShadowImage" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                    <div class="desktopImage">
+                        <BoxShadowImage class="boxShadowImage" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                    </div>
                 </div>
             </div> 
         </div> 
