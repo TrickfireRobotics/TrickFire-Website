@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
-.image-right, .image-left {
+.image-right,
+.image-left {
     padding: 3rem;
     width: 100%;
     background: $EerieBlack;
@@ -11,9 +12,10 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        
 
-        .text-section, .image-section {
+
+        .text-section,
+        .image-section {
             width: 50%;
             height: auto;
             align-items: center;
@@ -34,7 +36,8 @@
                 font-weight: 400;
             }
 
-            .text a, .text a:visited {
+            .text a,
+            .text a:visited {
                 color: $White;
                 text-decoration: underline;
             }
@@ -104,7 +107,8 @@
         margin-bottom: 4rem;
     }
 
-    .image-right, .image-left  {
+    .image-right,
+    .image-left {
         padding: 3rem 0rem;
         width: 100%;
 
@@ -123,7 +127,8 @@
             width: 100%;
         }
 
-        .text-section, .image-section {
+        .text-section,
+        .image-section {
             width: 85% !important;
             margin-right: 3rem;
             margin-left: 3rem;
@@ -143,7 +148,8 @@
                 font-weight: 400;
             }
 
-            .text a, .text a:visited {
+            .text a,
+            .text a:visited {
                 color: $White;
                 text-decoration: underline;
             }
