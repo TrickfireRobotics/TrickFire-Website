@@ -4,11 +4,11 @@
     background-color: $EerieBlack;
 }
 
-.opportunitiesSection {
+.opportunities-section {
     background-color: $Black;
     padding: 2rem;
 
-    .largeItalicCenter {
+    .large-italic-center {
         color: $White;
         text-align: center;
         font-size: 5rem;
@@ -16,7 +16,7 @@
         font-family: $font-heading;
     }
 
-    .disciplineList {
+    .discipline-list {
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -40,11 +40,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .largeItalicCenter {
+    .large-italic-center {
         font-size: 3rem !important;
     }
 
-    .disciplineList {
+    .discipline-list {
         h1 {
             font-size: 1.5rem !important;
         }
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .largeItalicCenter {
+    .large-italic-center {
         font-size: 2rem !important;
     }
 }

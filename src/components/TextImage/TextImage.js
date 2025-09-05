@@ -6,15 +6,15 @@ import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 export const TextImage = (props) => {
     return ( 
         <div class={props.imageOrder}>
-            <div class="sideBySide">
-                <div class="textSection">
+            <div class="side-by-side">
+                <div class="text-section">
                     <h2 class="subheader">{props.subheader}</h2>
                     <GradientLine />
 
-                    <br class="desktopImage"></br>
+                    <br class="desktop-image"></br>
 
-                    <div class="mobileImage">
-                        <BoxShadowImage class="boxShadowImage" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                    <div class="mobile-image">
+                        <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
                     </div>
 
                     <p class="text">{props.text}</p>
@@ -23,9 +23,9 @@ export const TextImage = (props) => {
                     {props.showButton && <Button link={props.link} buttonText={props.buttonText}/>}
                 </div>
 
-                <div class="imageSection">
-                    <div class="desktopImage">
-                        <BoxShadowImage class="boxShadowImage" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                <div class="image-section">
+                    <div class="desktop-image">
+                        <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
                     </div>
                 </div>
             </div> 
