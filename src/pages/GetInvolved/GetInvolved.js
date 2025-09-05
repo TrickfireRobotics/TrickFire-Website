@@ -13,7 +13,7 @@ export const GetInvolved = () => {
                 <TextImage 
                     imageOrder="image-left"
                     subheader="Join TrickFire" 
-                    text={["We are a student team competing in the ", <a href="https://urc.marssociety.org" rel="noreferrer" target="_blank">University Rover Challenge</a>,  " TrickFire Robotics draws a talented field of engineers, marketers, and scientists united by the exciting task of developing a rover that could one day assist astronauts on Mars. Our team emphasizes learning, development, collaboration, diverse participation, and community engagement. We encourage anyone considering joining our team to give it a chance. No previous experience is needed to join! New members are onboarded on a rolling basis."]}
+                    text={["We are a student team competing in the ", <a href="https://urc.marssociety.org" rel="noreferrer" target="_blank">University Rover Challenge</a>,  ". TrickFire Robotics draws a talented field of engineers, marketers, and scientists united by the exciting task of developing a rover that could one day assist astronauts on Mars. Our team emphasizes learning, development, collaboration, diverse participation, and community engagement. We encourage anyone considering joining our team to give it a chance. No previous experience is needed to join! New members are onboarded on a rolling basis."]}
                     showButton={true}
                     link="https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu" 
                     buttonText="Join Us!" 
