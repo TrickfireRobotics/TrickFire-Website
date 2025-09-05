@@ -37,7 +37,7 @@ export const GetInvolved = () => {
                     subheader="Partner With Us" 
                     text="TrickFire Robotics is made possible by the generous support of our sponsors and donors, who play a vital role in fostering the innovative work of the next generation of engineers. Sponsoring TrickFire Robotics not only empowers students to develop cutting-edge robots by preparing them to apply their skills in real-world applications, from space exploration to solving everyday challenges." 
                     showButton={true}
-                    link="" 
+                    link="mailto:tfrbtcs@uw.edu" 
                     buttonText="Sponsor Us!" 
                     imageSource={LabWithArm}
                     alternativeText="Three people, all in dark tops, observing a robotic arm on a wooden table." 
