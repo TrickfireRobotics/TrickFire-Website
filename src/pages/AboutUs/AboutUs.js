@@ -1,8 +1,6 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
-import { RepeatingTextBackground } from '../../components/RepeatingTextBackground/RepeatingTextBackground'
-import joinBackground from './../../assets/RepeatingText/Join.png'
 
 export const AboutUs = () => {
     return (
