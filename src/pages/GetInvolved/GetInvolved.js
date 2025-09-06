@@ -20,18 +20,23 @@ export const GetInvolved = () => {
                     imageSource={ClubFair}
                     alternativeText="Four smiling students stand next to a rover at a crowded table excited to talk about their work." 
                 />
+            </MaxWidthContainer>
 
-                <div class="opportunities-section">
-                    <h1 class="large-italic-center">Opportunities In...</h1>
-                    <div class="discipline-list">
-                        {disciplines.map((item, index) => 
-                            <div class="discipline" key={index}>
-                                <h1>{item}</h1>
-                            </div>
-                        )}
-                    </div>
+        
+            <div class="opportunities-section">
+                <MaxWidthContainer>
+                <h1 class="large-italic-center">Opportunities In...</h1>
+                <div class="discipline-list">
+                    {disciplines.map((item, index) => 
+                        <div class="discipline" key={index}>
+                            <h1>{item}</h1>
+                        </div>
+                    )}
                 </div>
+                </MaxWidthContainer>
+            </div>
 
+            <MaxWidthContainer>
                 <TextImage 
                     imageOrder="image-right"
                     subheader="Partner With Us" 
