@@ -31,7 +31,13 @@ export const Footer = () => {
                     </ul>
                 </nav>
                 
-                <p className='copyright'>Copyright © {date.getFullYear()} TrickFire Robotics. All rights reserved. Bothell, WA.</p>
+                <p className='copyright'>
+                    Copyright © {date.getFullYear()} TrickFire Robotics.  
+                    <br />
+                    All rights reserved.
+                    <br /> 
+                    Bothell, WA.
+                </p>
             </MaxWidthContainer>
         </footer>
     )
