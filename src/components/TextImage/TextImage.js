@@ -6,15 +6,16 @@ import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 /**
  * @component
  * 
- * TextImage component that ...
+ * A responsive (and reversible) text/image component that displays text and an image according to layout input.
  * 
- * @param {string} props.imageOrder - "imageRight" or "imageLeft" determines which side the image and text are on.
- * @param {string} props.subheader - Subheader for the text section.
+ * @param {string} props.imageOrder - "imageRight" or "imageLeft" dictates which side of the text the image is on.
+ * @param {string} props.subheader - Subheading for the text section.
+ * @param {string} props.text - Body text for the text section.
  * @param {string} props.imageSource - The image source.
  * @param {string} props.alternativeText - Alt text for the imageSource image.
- * @param {boolean} props.showButton - Whether or not there should be a button displayed.
- * @param {string} props.link - The link for the button.
- * @param {string} props.buttonText - The text to display on the button.
+ * @param {boolean} props.showButton - Whether or not a button is desired/should be displayed.
+ * @param {string} props.link - The link or destination for the button.
+ * @param {string} props.buttonText - The text/label for the button.
  * @returns {JSX.Element}
  */
 export const TextImage = (props) => {
