@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import { MaxWidthContainer } from '../MaxWidthContainer/MaxWidthContainer';
-
 /**
  * Navbar component that renders subpage navigation links.
  * @component
