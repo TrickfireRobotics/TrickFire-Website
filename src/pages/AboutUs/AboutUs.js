@@ -1,6 +1,7 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 
 export const AboutUs = () => {
     return (
@@ -24,8 +25,8 @@ export const AboutUs = () => {
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
                 />
             </MaxWidthContainer>
-            <RepeatingTextBackground
-                backgroundImage={joinBackground}
+            <OutlinedBox
+                backgroundText='Join'
                 link=''
                 buttonText='Join Us!'
                 text='Our team consists of smaller specialized subteams that all contribute to the rover at large. Members can join multiple teams and work on several different projects covering a variety of disciplines. No previous experience is needed to join! New members are onboarded on a rolling basis.'

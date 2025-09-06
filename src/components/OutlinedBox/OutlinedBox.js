@@ -9,7 +9,7 @@ import { RepeatingTextBackground } from '../RepeatingTextBackground/RepeatingTex
  */
 export const OutlinedBox = (props) => {
     return (
-        <RepeatingTextBackground backgroundImage={props.backgroundImage} >
+        <RepeatingTextBackground backgroundText={props.backgroundText} >
             <MaxWidthContainer>
                 <div className='outlined-box'>
                     <p className='text'>{props.text}</p>

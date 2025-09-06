@@ -1,8 +1,6 @@
 import './GetInvolved.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
-import { RepeatingTextBackground } from '../../components/RepeatingTextBackground/RepeatingTextBackground'
-import contactBackground from './../../assets/RepeatingText/Contact.png'
 import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 import ClubFair from '../../assets/GetInvolved/clubFair.jpeg'
 import LabWithArm from '../../assets/GetInvolved/labWithArm.webp'
@@ -68,7 +66,7 @@ export const GetInvolved = () => {
                 />
             </MaxWidthContainer>
             <OutlinedBox
-                backgroundImage={contactBackground}
+                backgroundText='CONTACT'
                 link=''
                 buttonText='Contact Us!'
                 text='If you are interested in mentoring the team, having us demo or display our rover at an event, or have any other questions for TrickFire Robotics, please get in touch!'

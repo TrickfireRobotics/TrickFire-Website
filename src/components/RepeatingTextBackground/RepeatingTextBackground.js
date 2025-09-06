@@ -5,8 +5,21 @@ import './RepeatingTextBackground.scss'
  * @component
  */
 export const RepeatingTextBackground = (props) => {
+    // Repeat the given background text
+    const repeatedText = Array.from({ length: 10 }, (_, i) => (
+        <div
+            key={i}
+            className='repeat-text-item'
+            style={{ top: `${i * 3.5}rem` }}
+        >
+            {`${props.backgroundText} `.repeat(30)}
+        </div>
+    ));
+
+    // Return the full background
     return (
-        <div className='repeating-text-background' style={{ backgroundImage: `url(${props.backgroundImage})` }}>
+        <div className='repeating-text-background'>
+            {repeatedText}
             {props.children}
         </div>
     );
