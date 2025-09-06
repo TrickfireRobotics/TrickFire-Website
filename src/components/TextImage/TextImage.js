@@ -33,7 +33,7 @@ export const TextImage = (props) => {
 
                         <p class="text">{props.text}</p>
 
-                        {props.showButton && <Button link={props.link} buttonText={props.buttonText}/>}
+                        {props.showButton && <Button isLink={props.isLink} isSubpageLink={props.isSubpageLink} link={props.link} buttonText={props.buttonText}/>}
                     </div>
 
                     <div class="image-section">

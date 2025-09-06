@@ -15,6 +15,8 @@ export const GetInvolved = () => {
                     subheader="Join TrickFire" 
                     text={["We are a student team competing in the ", <a href="https://urc.marssociety.org" rel="noreferrer" target="_blank">University Rover Challenge</a>,  ". TrickFire Robotics draws a talented field of engineers, marketers, and scientists united by the exciting task of developing a rover that could one day assist astronauts on Mars. Our team emphasizes learning, development, collaboration, diverse participation, and community engagement. We encourage anyone considering joining our team to give it a chance. No previous experience is needed to join! New members are onboarded on a rolling basis."]}
                     showButton={true}
+                    isSubpageLink={false}
+                    isLink={true}
                     link="https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu" 
                     buttonText="Join Us!" 
                     imageSource={ClubFair}
@@ -42,6 +44,8 @@ export const GetInvolved = () => {
                     subheader="Partner With Us" 
                     text="TrickFire Robotics is made possible by the generous support of our sponsors and donors, who play a vital role in fostering the innovative work of the next generation of engineers. Sponsoring TrickFire Robotics not only empowers students to develop cutting-edge robots by preparing them to apply their skills in real-world applications, from space exploration to solving everyday challenges." 
                     showButton={true}
+                    isSubpageLink={false}
+                    isLink={true}
                     link="mailto:tfrbtcs@uw.edu" 
                     buttonText="Sponsor Us!" 
                     imageSource={LabWithArm}
