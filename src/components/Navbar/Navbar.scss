@@ -1,77 +1,120 @@
 @import '../../variables.scss';
 
 .navbar{
-    // background-color: $EerieBlack;
     background-color: #292929;
-    height: 7rem;
     padding: 1rem 3rem;
     width: 100%;
     
     position: absolute;
     z-index: 2;
+  
+    .subpage-link {
+        color: $White;
+        text-decoration: none;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 0.25rem;
+            background-color: $White;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        &:not(.active):hover::after {
+            opacity: 1;
+            transform: translateY(2px)
+        }
+
+        &.active::after {
+            opacity: 1;
+            background-image: linear-gradient(
+                to right,
+                $TrickFireGreen,
+                $AccentPink
+            );
+        }
+    }
 
     .max-width-container {
-        height: 80%;
+        height: 100%;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: auto 0;
 
-        .trickfire-logo-link {
-            height: 100%;
-            border-radius: 0.5rem;
-            transition: background-color 0.2 ease;
+        .navbar-row {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
 
-            .trickfire-logo {
+            .trickfire-logo-link {
                 height: 100%;
-                width: auto;
+                border-radius: 0.5rem;
+                transition: background-color 0.2 ease;
+
+                .trickfire-logo {
+                    height: 100%;
+                    width: auto;
+                }
+
+                &:hover {
+                    background-color: #444444;
+                }
             }
 
-            &:hover {
-                background-color: #444444;
+            .subpage-nav .subpage-list{
+                display: flex;
+                list-style-type: none;
+                color: $White;
+                gap: 2rem;
+
+            }
+
+            .mobile-menu-button{
+                background-color: transparent;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+
+                img{
+                    width: 100%;
+                }
             }
         }
 
-        .subpage-nav .subpage-list{
+        .mobile-subpage-nav{
             display: flex;
-            list-style-type: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            text-align: center;
+            height: 40svh;
+
             color: $White;
-            gap: 1.5rem;
+            text-decoration: None;
 
-            .subpage-link {
-                color: $White;
-                text-decoration: none;
+            .mobile-subpage-list {
+                height: 70%;
+                padding-bottom: 1rem;
+                margin: auto 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: -4px;
-                    width: 100%;
-                    height: 0.25rem;
-                    background-color: $White;
-                    opacity: 0;
-                    transform: translateY(5px);
-                    transition: opacity 0.3s ease, transform 0.3s ease;
-                }
-
-                &:not(.active):hover::after {
-                    opacity: 1;
-                    transform: translateY(2px)
-                }
-
-                &.active::after {
-                    opacity: 1;
-                    background-image: linear-gradient(
-                        to right,
-                        $TrickFireGreen,
-                        $AccentPink
-                    );
+                .subpage-link {
+                    font-size: 2rem;
                 }
             }
         }
