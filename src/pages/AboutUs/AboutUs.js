@@ -20,7 +20,7 @@ export const AboutUs = () => {
                 <TextImage 
                     imageOrder="image-right"
                     subheader="Our Disciplines" 
-                    text={["TrickFire Robotics is composed of students from a variety of majors with business and technical interests.   ", <ul><br></br><li>Software Engineering</li><li>Mechanical Engineering</li><li>Electrical Engineering</li><li>Science</li><li>Finance</li><li>Marketing</li></ul>]} 
+                    text={["TrickFire Robotics is composed of students from a variety of majors with business and technical interests.   ", <ul><br></br><li>Software Engineering</li><li>Mechanical Engineering</li><li>Electrical Engineering</li><li>Science</li><li>Marketing</li><li>Finance</li></ul>]} 
                     showButton={false}
                     imageSource={Rover2025}
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. " 
