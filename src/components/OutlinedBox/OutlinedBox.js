@@ -8,7 +8,11 @@ import { RepeatingTextBackground } from '../RepeatingTextBackground/RepeatingTex
  *
  * Outlined box component that renders the gray box outlined in white.
  *
- * @param {string} props.backgroundText - The text that will be repeated in the background of this section.
+ * @param {boolean} props.isLink - Tells if the button is a link or not.
+ * @param {boolean} props.isSubpageLink - Tells if the button is a subpage link or not.
+ * @param {string} props.link - The link used on the button to redirect users.
+ * @param {string} props.buttonText - The text displayed on top of the button.
+ * @param {string} props.text - The text dsiplayed within the outlined box next to the button.
  * @returns {JSX.Element}
  */
 export const OutlinedBox = (props) => {
