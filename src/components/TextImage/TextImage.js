@@ -3,29 +3,45 @@ import { GradientLine } from '../GradientLine/GradientLine'
 import { Button } from '../Button/Button'
 import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 
+/**
+ * @component
+ * 
+ * A responsive (and reversible) text/image component that displays text and an image according to layout input.
+ * 
+ * @param {string} props.imageOrder - "imageRight" or "imageLeft" dictates which side of the text the image is on.
+ * @param {string} props.subheader - Subheading for the text section.
+ * @param {string} props.text - Body text for the text section.
+ * @param {string} props.imageSource - The image source.
+ * @param {string} props.alternativeText - Alt text for the imageSource image.
+ * @param {boolean} props.showButton - Whether or not a button is desired/should be displayed.
+ * @param {string} props.link - The link or destination for the button.
+ * @param {boolean} props.isLink - Whether or not a button links to an outside resource.
+ * @param {boolean} props.isSubpageLink - Whether or not a button links to a subpage.
+ * @param {string} props.buttonText - The text/label for the button.
+ * @returns {JSX.Element}
+ */
 export const TextImage = (props) => {
     return (
-        <div class={props.imageOrder}>
-            <div class="side-by-side">
-                <div class="text-section">
-                    <h2 class="subheader">{props.subheader}</h2>
-                    <GradientLine />
+        <div class="text-image">
+            <div class={props.imageOrder}>
+                <div class="side-by-side">
+                    <div class="text-section">
+                        <h2 class="subheader">{props.subheader}</h2>
+                        <GradientLine />
 
-                    <br class="desktop-image"></br>
+                        <div class="mobile-image">
+                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
+                        </div>
 
-                    <div class="mobile-image">
-                        <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
+                        <p class="text">{props.text}</p>
+
+                        {props.showButton && <Button isLink={props.isLink} isSubpageLink={props.isSubpageLink} link={props.link} buttonText={props.buttonText} />}
                     </div>
 
-                    <p class="text">{props.text}</p>
-                    <br></br>
-                    <br></br>
-                    {props.showButton && <Button link={props.link} buttonText={props.buttonText} />}
-                </div>
-
-                <div class="image-section">
-                    <div class="desktop-image">
-                        <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
+                    <div class="image-section">
+                        <div class="desktop-image">
+                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
+                        </div>
                     </div>
                 </div>
             </div>

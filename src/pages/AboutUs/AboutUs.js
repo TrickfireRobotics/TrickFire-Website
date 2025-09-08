@@ -16,10 +16,17 @@ export const AboutUs = () => {
                     alternativeText="A large student team standing behind a rover with multicolored wheels."
                 />
 
+<<<<<<< HEAD
                 <TextImage
                     imageOrder="imageRight"
                     subheader="Our Disciplines"
                     text="TrickFire Robotics is composed of students from a variety of majors with business and technical interests. ● Software Engineering ● Mechanical Engineering ● Electrical Engineering ● Science ● Marketing ● Finance"
+=======
+                <TextImage 
+                    imageOrder="image-right"
+                    subheader="Our Disciplines" 
+                    text={["TrickFire Robotics is composed of students from a variety of majors with business and technical interests.   ", <ul><br></br><li>Software Engineering</li><li>Mechanical Engineering</li><li>Electrical Engineering</li><li>Science</li><li>Marketing</li><li>Finance</li></ul>]} 
+>>>>>>> 2025Rework
                     showButton={false}
                     imageSource="https://cdn.discordapp.com/attachments/1258621803811700778/1378222197482455151/IMG_1439.jpeg?ex=68bb09b2&is=68b9b832&hm=69d13230c8b432a15415c8670862552357235a4699651ce3256b2fef9b818cd8"
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
