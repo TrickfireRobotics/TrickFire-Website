@@ -8,10 +8,10 @@ import { RepeatingTextBackground } from '../RepeatingTextBackground/RepeatingTex
  *
  * Outlined box component that renders the gray box outlined in white.
  *
- * @param {boolean} props.isLink - Tells if the button is a link or not.
- * @param {boolean} props.isSubpageLink - Tells if the button is a subpage link or not.
- * @param {string} props.link - The link used on the button to redirect users.
- * @param {string} props.buttonText - The text displayed on top of the button.
+ * @param {string} props.link - The link or destination for the button.
+ * @param {boolean} props.isLink - Whether or not a button links to an outside resource.
+ * @param {boolean} props.isSubpageLink - Whether or not a button links to a subpage.
+ * @param {string} props.buttonText - The text/label for the button.
  * @param {string} props.text - The text dsiplayed within the outlined box next to the button.
  * @returns {JSX.Element}
  */
