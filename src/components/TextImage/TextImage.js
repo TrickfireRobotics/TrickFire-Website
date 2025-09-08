@@ -15,6 +15,8 @@ import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
  * @param {string} props.alternativeText - Alt text for the imageSource image.
  * @param {boolean} props.showButton - Whether or not a button is desired/should be displayed.
  * @param {string} props.link - The link or destination for the button.
+ * @param {boolean} props.isLink - Whether or not a button links to an outside resource.
+ * @param {boolean} props.isSubpageLink - Whether or not a button links to a subpage.
  * @param {string} props.buttonText - The text/label for the button.
  * @returns {JSX.Element}
  */
