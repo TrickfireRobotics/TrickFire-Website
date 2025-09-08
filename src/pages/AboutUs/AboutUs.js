@@ -29,7 +29,7 @@ export const AboutUs = () => {
             </MaxWidthContainer>
             <OutlinedBox
                 backgroundText='Join'
-                link=''
+                link='https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu'
                 buttonText='Join Us!'
                 isSubpageLink={false}
                 isLink={true}
