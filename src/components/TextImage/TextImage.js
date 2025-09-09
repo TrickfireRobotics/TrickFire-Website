@@ -21,7 +21,7 @@ import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
  * @returns {JSX.Element}
  */
 export const TextImage = (props) => {
-    return ( 
+    return (
         <div class="text-image">
             <div class={props.imageOrder}>
                 <div class="side-by-side">
@@ -30,21 +30,21 @@ export const TextImage = (props) => {
                         <GradientLine />
 
                         <div class="mobile-image">
-                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
                         </div>
 
                         <p class="text">{props.text}</p>
 
-                        {props.showButton && <Button isLink={props.isLink} isSubpageLink={props.isSubpageLink} link={props.link} buttonText={props.buttonText}/>}
+                        {props.showButton && <Button isLink={props.isLink} isSubpageLink={props.isSubpageLink} link={props.link} buttonText={props.buttonText} />}
                     </div>
 
                     <div class="image-section">
                         <div class="desktop-image">
-                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText}/>
+                            <BoxShadowImage class="box-shadow-image" imageSource={props.imageSource} alternativeText={props.alternativeText} />
                         </div>
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </div>
     )
 }
