@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.officer-box {
+    .overlay {
+        background-color: $White;
+        opacity: 0.5;
+    }
+
+    .officer-name {
+        font-family: $font-body;
+        font-size: 1rem;
+        color: $Black;
+        font-weight: 400;
+    }
+}
