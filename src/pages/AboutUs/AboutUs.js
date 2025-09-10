@@ -1,8 +1,10 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import { Officer } from './../../components/Officer/Officer'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
+import ClaytonImage from '../../assets/AboutUs/Clayton.png'
 
 export const AboutUs = () => {
     return (
@@ -24,6 +26,11 @@ export const AboutUs = () => {
                     showButton={false}
                     imageSource={Rover2025}
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
+                />
+                <Officer
+                    name='Clayton'
+                    position='President'
+                    image={ClaytonImage}
                 />
             </MaxWidthContainer>
         </main>
