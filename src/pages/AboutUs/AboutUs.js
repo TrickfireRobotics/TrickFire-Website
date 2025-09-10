@@ -27,6 +27,7 @@ export const AboutUs = () => {
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
                 />
             </MaxWidthContainer>
+            
             <OutlinedBox
                 backgroundText='Join'
                 link='https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu'

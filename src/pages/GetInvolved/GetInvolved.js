@@ -48,6 +48,7 @@ export const GetInvolved = () => {
                     alternativeText="Three people, all in dark tops, observing a robotic arm on a wooden table."
                 />
             </MaxWidthContainer>
+
             <OutlinedBox
                 backgroundText='CONTACT'
                 link='mailto:tfrbtcs@uw.edu'
@@ -56,7 +57,6 @@ export const GetInvolved = () => {
                 isLink={true}
                 text='If you are interested in mentoring the team, having us demo or display our rover at an event, or have any other questions for TrickFire Robotics, please get in touch!'
             />
-
         </main>
     )
 }
