@@ -1,10 +1,10 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
-import { Officer } from './../../components/Officer/Officer'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
 import ClaytonImage from '../../assets/AboutUs/Clayton.png'
+import { OfficerSection } from '../../components/OfficerSelector/OfficerSection'
 
 export const AboutUs = () => {
     return (
@@ -27,10 +27,12 @@ export const AboutUs = () => {
                     imageSource={Rover2025}
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
                 />
-                <Officer
-                    name='Clayton'
-                    position='President'
-                    image={ClaytonImage}
+                <OfficerSection
+                    allOfficers={[
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Allison', position: 'vice president', image: ClaytonImage },
+                        { type: 'team', name: 'Aaron', position: 'mission control', image: ClaytonImage },
+                    ]}
                 />
             </MaxWidthContainer>
         </main>

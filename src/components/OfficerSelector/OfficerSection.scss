@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    .tab {
+        font-family: $font-heading;
+        font-size: 2rem;
+        color: $White;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+        position: relative;
+        background: none;
+        border: none;
+        outline: none;
+        padding-bottom: 0.25em;
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            background-image: linear-gradient(to right,
+                    $TrickFireGreen,
+                    $AccentPink );
+        }
+    }
+}
+
+.officer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
