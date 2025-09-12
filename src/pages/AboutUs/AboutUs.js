@@ -32,6 +32,11 @@ export const AboutUs = () => {
                         { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
                         { type: 'officer', name: 'Allison', position: 'vice president', image: ClaytonImage },
                         { type: 'team', name: 'Aaron', position: 'mission control', image: ClaytonImage },
+                        { type: 'officer', name: 'Ella', position: 'secretary', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
                     ]}
                 />
             </MaxWidthContainer>

@@ -1,6 +1,7 @@
 import './OfficerSection.scss'
 import { Officer } from '../Officer/Officer';
 import { useState } from 'react'
+import { GradientLine } from '../GradientLine/GradientLine';
 
 /**
  * @component
@@ -14,7 +15,8 @@ import { useState } from 'react'
  * @returns {JSX.Element}
  */
 export const OfficerSection = (props) => {
-    const [activeTab, setActiveTab] = useState('officers');
+    const [activeTab, setActiveTab] = useState('officer');
+    const [isDropDownactive, setIsDropdownActive] = useState(false);
 
     const tabs = [
         { key: 'officer', label: 'OFFICERS' },
@@ -30,7 +32,8 @@ export const OfficerSection = (props) => {
 
     return (
         <div className='officer-section'>
-            { /* Selector Tabs */}
+            <h1 className='title'>TrickFire is 100% Student-Led</h1>
+            { /* Desktop Selector Tabs */}
             <div className='tabs'>
                 {tabs.map(tab => (
                     <button
@@ -41,6 +44,32 @@ export const OfficerSection = (props) => {
                         {tab.label}
                     </button>
                 ))}
+            </div>
+            { /* Mobile Dropdown */}
+            <div className='mobile-tabs'>
+                <button
+                    className='active-tab'
+                    onClick={() => setIsDropdownActive(!isDropDownactive)}
+                >
+                    {tabs.find(t => t.key === activeTab)?.label}
+                    <span className='arrow'>{isDropDownactive ? '▲' : '▼'}</span>
+                </button>
+                <GradientLine className='gradient' />
+                {isDropDownactive && (
+                    <div className='dropdown'>
+                        {tabs.map(tab => (
+                            <button
+                                key={tab.key}
+                                onClick={() => {
+                                    setActiveTab(tab.key);
+                                    setIsDropdownActive(false);
+                                }}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
             { /* Grid of Officer Images */}
             <div className='officer-grid'>
@@ -53,6 +82,6 @@ export const OfficerSection = (props) => {
                     />
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
