@@ -1,6 +1,7 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
 import ClaytonImage from '../../assets/AboutUs/Clayton.png'
@@ -27,6 +28,16 @@ export const AboutUs = () => {
                     imageSource={Rover2025}
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
                 />
+            </MaxWidthContainer>
+            <OutlinedBox
+                backgroundText='Join'
+                link='https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu'
+                buttonText='Join Us!'
+                isSubpageLink={false}
+                isLink={true}
+                text='Our team consists of smaller specialized subteams that all contribute to the rover at large. Members can join multiple teams and work on several different projects covering a variety of disciplines. No previous experience is needed to join! New members are onboarded on a rolling basis.'
+            />
+            <MaxWidthContainer>
                 <OfficerSection
                     allOfficers={[
                         { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
