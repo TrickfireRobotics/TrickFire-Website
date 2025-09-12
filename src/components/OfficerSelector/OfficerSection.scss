@@ -37,7 +37,7 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                height: 4px;
+                height: 3px;
                 width: 100%;
                 background-image: linear-gradient(to right,
                         $TrickFireGreen,
@@ -53,6 +53,7 @@
     .mobile-tabs {
         display: none;
         position: relative;
+        padding: 3rem;
 
         .active-tab {
             width: 100%;
@@ -62,7 +63,7 @@
             background: none;
             border: none;
             color: $White;
-            padding: 1rem;
+            padding-bottom: 0.25rem;
             cursor: pointer;
 
             .arrow {
