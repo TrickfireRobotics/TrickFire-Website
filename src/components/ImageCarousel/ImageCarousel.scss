@@ -15,26 +15,62 @@
         img {
             width: 100%;
             user-select: none;
+            border: 1px solid $White;
         }
 
         .overlay-text {
-            color: $Black;
             background-color: $White;
-            font-family: $font-body;
-            opacity: 50%;
             position: absolute;
             bottom: 0.25rem;
             left: 0;
-            width: 40%;
-            height: 5rem;
+            width: 45%;
+            height: 6rem;
             padding: 0.5rem;
+            opacity: 50%;
+            overflow: scroll;
+
+            p {
+                color: $Black;
+                font-family: $font-body;
+                opacity: 100%;
+            }
         }
     }
 
+    @media screen and (max-width: 1300px) {
+        .overlay-text {
+            width: 100% !important;
+            height: 4.5rem !important;
+        }
+
+    }
 
     @media screen and (max-width: 768px) {
         .large-center-text {
             font-size: 3rem !important;
+            margin-bottom: -3rem !important;
+        }
+
+        .image-and-overlay {
+            margin: 3rem;
+
+            img {
+                width: 100%;
+                user-select: none;
+            }
+
+            .overlay-text {
+                background-color: $EerieBlack !important;
+                position: relative !important;
+                width: 100% !important;
+                padding: 1rem 0rem !important;
+                overflow: visible !important;
+                margin-bottom: 5rem !important;
+
+                p {
+                    color: $DarkWhite !important;
+                }
+            }
         }
     }
 }

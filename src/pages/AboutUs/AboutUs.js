@@ -10,9 +10,12 @@ import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
 
 const image_carousel_images = [
-    { src: TeamPhoto2025, alt: 'Alt Text 1' , overlay: 'Overlay Text 1'},
-    { src: TeamPhoto2024, alt: 'Alt Text 2', overlay: 'Overlay Text 2'},
-    { src: TeamPhoto2020, alt: 'Alt Text 3', overlay: 'Overlay Text 3'}
+    { src: TeamPhoto2025, 
+      alt: 'Three rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue with clouds.'},
+    { src: TeamPhoto2024, 
+      alt: 'Two rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue.'},
+    { src: TeamPhoto2020, 
+      alt: 'Students stand and sit in front of a large W. Some are in TrickFire Robotics shirts. The ground is cold and wet, the sky is gray.'}
 ];
 
 export const AboutUs = () => {

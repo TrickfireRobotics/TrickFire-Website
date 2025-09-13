@@ -9,7 +9,10 @@ export const ImageCarousel = (props) => {
                 {props.images.map((image) =>
                     <div class="image-and-overlay" key={image.id}>
                         <img key={image.id} src={image.src} alt={image.alt} draggable="false"/>
-                        <p class="overlay-text">{image.overlay}</p>
+                        <div class="overlay-text">
+                            <p>TrickFire Robotics is a student team at UWB currently competing in the University Rover Challenge by the Mars Society. We previously competed in NASA Lunabotics, a lunar mining competition. Over the years, TrickFire has built a strong student and alumni community.</p>
+                        </div>
+                        {/*<p class="overlay-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>*/}
                     </div>
                 )}
             </div>
