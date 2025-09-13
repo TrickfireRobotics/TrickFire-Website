@@ -1,14 +1,28 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import { ImageCarousel } from './../../components/ImageCarousel/ImageCarousel'
 import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
+import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
+import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
+import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
+
+const image_carousel_images = [
+    { src: TeamPhoto2025, alt: 'Alt Text 1' , overlay: 'Overlay Text 1'},
+    { src: TeamPhoto2024, alt: 'Alt Text 2', overlay: 'Overlay Text 2'},
+    { src: TeamPhoto2020, alt: 'Alt Text 3', overlay: 'Overlay Text 3'}
+];
 
 export const AboutUs = () => {
     return (
         <main className='about-us'>
             <MaxWidthContainer>
+                <ImageCarousel 
+                    images = {image_carousel_images}
+                />
+
                 <TextImage
                     imageOrder="image-left"
                     subheader="About Us"

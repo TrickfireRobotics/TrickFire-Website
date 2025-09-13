@@ -1,1 +1,40 @@
 @import '../../variables.scss';
+
+.image-carousel {
+    .large-center-text {
+        color: $White;
+        text-align: right;
+        font-size: 5rem;
+        font-family: $font-heading;
+        margin: 0rem 3rem;
+    }
+
+    .image-and-overlay {
+        margin: 0rem 3rem;
+
+        img {
+            width: 100%;
+            user-select: none;
+        }
+
+        .overlay-text {
+            color: $Black;
+            background-color: $White;
+            font-family: $font-body;
+            opacity: 50%;
+            position: absolute;
+            bottom: 0.25rem;
+            left: 0;
+            width: 40%;
+            height: 5rem;
+            padding: 0.5rem;
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .large-center-text {
+            font-size: 3rem !important;
+        }
+    }
+}
