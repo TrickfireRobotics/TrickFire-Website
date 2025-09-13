@@ -2,7 +2,7 @@
 
 .image-carousel {
     background-color: $Black;
-    padding: 1rem 0rem;
+    padding: 3rem 0rem;
 
     .large-center-text {
         color: $White;
@@ -12,67 +12,67 @@
         margin: 0rem 3rem;
     }
 
-    .image-and-overlay {
+    .image-and-arrows {
         margin: 0rem 3rem;
+        padding: 0rem;
+        max-width: 100%;
 
         img {
             width: 100%;
-            user-select: none;
-            border: 1px solid $White;
         }
 
-        .overlay-text {
-            background-color: $White;
+        .arrow-button-left, .arrow-button-right {
+            z-index: 1;
+            cursor: pointer;
+            user-select: none;
             position: absolute;
-            bottom: 0.25rem;
-            left: 0;
-            width: 45%;
-            height: 6rem;
-            padding: 0.5rem;
-            opacity: 50%;
-            overflow: scroll;
+            border: none;
+            top: 40%;
+            width: auto;
+            margin: 0rem 0.75rem;
+        }
 
-            p {
-                color: $Black;
-                font-family: $font-body;
-                opacity: 100%;
-            }
+        .arrow-button-left {
+            left: 0;
+        }
+
+        .arrow-button-right {
+            right: 0;
         }
     }
 
-    @media screen and (max-width: 1300px) {
-        .overlay-text {
-            width: 100% !important;
-            height: 4.5rem !important;
-        }
-
+    .overlay-text {
+        background-color: $White;
+        position: absolute;
+        bottom: 0.25rem;
+        left: 0;
+        width: 45%;
+        height: 6rem;
+        padding: 0.5rem;
+        margin: 0rem 3rem;
+        opacity: 50%;
+        overflow: scroll;
     }
 
     @media screen and (max-width: 768px) {
         .large-center-text {
             font-size: 3rem !important;
-            margin-bottom: -3rem !important;
+            margin-bottom: 0rem !important;
         }
 
-        .image-and-overlay {
-            margin: 3rem;
+        .overlay-text {
+            background-color: $Black !important;
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+            bottom: 0rem !important;
+            opacity: 100% !important;
+            padding: 0rem 3rem !important;
+            margin: 1rem 0rem !important;
 
-            img {
-                width: 100%;
-                user-select: none;
-            }
-
-            .overlay-text {
-                background-color: $EerieBlack !important;
-                position: relative !important;
-                width: 100% !important;
-                padding: 1rem 0rem !important;
-                overflow: visible !important;
-                margin-bottom: 5rem !important;
-
-                p {
-                    color: $DarkWhite !important;
-                }
+            p {
+                color: $DarkWhite !important;
             }
         }
     }

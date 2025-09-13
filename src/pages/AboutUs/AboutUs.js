@@ -18,11 +18,16 @@ const image_carousel_images = [
       alt: 'Students stand and sit in front of a large W. Some are in TrickFire Robotics shirts. The ground is cold and wet, the sky is gray.'}
 ];
 
+const image_carousel_images_temp = [
+    { src: TeamPhoto2025, 
+      alt: 'Three rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue with clouds.'}
+];
+
 export const AboutUs = () => {
     return (
         <main className='about-us'>
             <ImageCarousel 
-                images = {image_carousel_images}
+                images = {image_carousel_images_temp}
             />
             
             <MaxWidthContainer>
