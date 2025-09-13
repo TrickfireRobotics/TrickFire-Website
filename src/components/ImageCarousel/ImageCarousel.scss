@@ -1,6 +1,9 @@
 @import '../../variables.scss';
 
 .image-carousel {
+    background-color: $Black;
+    padding: 1rem 0rem;
+
     .large-center-text {
         color: $White;
         text-align: right;

@@ -21,11 +21,11 @@ const image_carousel_images = [
 export const AboutUs = () => {
     return (
         <main className='about-us'>
+            <ImageCarousel 
+                images = {image_carousel_images}
+            />
+            
             <MaxWidthContainer>
-                <ImageCarousel 
-                    images = {image_carousel_images}
-                />
-
                 <TextImage
                     imageOrder="image-left"
                     subheader="About Us"
