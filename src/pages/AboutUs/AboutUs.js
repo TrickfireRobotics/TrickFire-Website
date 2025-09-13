@@ -23,6 +23,7 @@ export const AboutUs = () => {
         <main className='about-us'>
             <ImageCarousel 
                 images = {image_carousel_images}
+                numImages = {Object.keys(image_carousel_images).length}
             />
             
             <MaxWidthContainer>

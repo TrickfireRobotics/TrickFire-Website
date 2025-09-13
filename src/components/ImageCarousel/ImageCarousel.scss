@@ -33,6 +33,11 @@
             margin: 0rem 0.75rem;
         }
 
+        .arrow-button-left:hover, .arrow-button-right:hover {
+            opacity: 85%;
+        }
+
+
         .arrow-button-left {
             left: 0;
         }

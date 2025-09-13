@@ -7,7 +7,7 @@ import { useCallback, useState } from "react";
 
 export const ImageCarousel = (props) => {
     const [currentSlide, setCurrentSlide] = useState(0)
-    const length = 3
+    const length = props.numImages
 
     const nextSlide = () => {
         setCurrentSlide(currentSlide - 1 < 0 ? length - 1 : currentSlide - 1);
