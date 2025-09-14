@@ -8,6 +8,7 @@ import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
 import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
 import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
+import { GradientLine } from '../../components/GradientLine/GradientLine'
 
 const image_carousel_images = [
     { src: TeamPhoto2025, 
@@ -19,6 +20,25 @@ const image_carousel_images = [
 ];
 
 export const AboutUs = () => {
+    const current_year = new Date().getFullYear()
+    const founding_year = 2016
+    const years = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+
+    /*for (let year = {current_year}; year >= founding_year; year--) {
+        years.push(year);
+    }*/
+
+    /*const yearSection = document.querySelector('.year-section');
+
+    function horizontalScroll() {
+        if (yearSection.scrollLeft + yearSection.clientWidth >= yearSection.scrollWidth) {
+            yearSection.scrollLeft = 0;
+        } else {
+            yearSection.scrollLeft += 1;
+        }
+    }
+    setInterval(horizontalScroll, 15);*/
+
     return (
         <main className='about-us'>
             <ImageCarousel 
@@ -27,6 +47,21 @@ export const AboutUs = () => {
                 numImages = {Object.keys(image_carousel_images).length}
                 overlay = "TrickFire Robotics is a student team at UWB currently competing in the University Rover Challenge by the Mars Society. We previously competed in NASA Lunabotics, a lunar mining competition. Over the years, TrickFire has built a strong student and alumni community."
             />
+
+            <div class="horizontal-scroll-year-section">
+                <MaxWidthContainer>
+                    <div class="year-section">
+                        {years.map((item, index) =>
+                            <div class="year" key={index}>
+                                <h1>{item}</h1>
+                                <div class="gradient-underline">
+                                    <GradientLine />
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </MaxWidthContainer>
+            </div>
             
             <MaxWidthContainer>
                 <TextImage

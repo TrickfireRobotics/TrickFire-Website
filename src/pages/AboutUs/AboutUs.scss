@@ -2,4 +2,55 @@
 
 .about-us {
     background-color: $EerieBlack;
+
+    .horizontal-scroll-year-section {
+        width: 100%;
+        background-color: $Black;
+    }
+
+    .year-section {
+        width: 100%;
+        background: $Black;
+        display: flex;
+        padding: 3rem 0rem;
+        padding-bottom: 3rem;
+        padding-top: 0rem;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        .year {
+            color: $DarkWhite;
+            font-size: 3rem;
+            font: $font-heading;
+            display: inline;
+            font-style: italic;
+            margin-right: 3rem;
+
+            .gradient-underline {
+                display: none;
+            }
+        }
+    }
+
+    .year-section div:last-child {
+        color: $White !important;
+
+        .gradient-underline {
+            display: block !important;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .year-section {
+            margin-top: -1rem !important;
+        }
+        
+        .year {
+            margin-right: 2rem !important;
+
+            h1 {
+                font-size: 3rem !important;
+            }
+        }
+    }
 }
