@@ -36,7 +36,7 @@ export const AboutUs = () => {
             
             const yearSection = document.querySelector('.year-section');
 
-            /*function horizontalScroll() {
+            function horizontalScroll() {
                 if (yearSection.scrollLeft + yearSection.clientWidth >= yearSection.scrollWidth) {
                     yearSection.scrollLeft = 0;
                 } else {
@@ -44,9 +44,9 @@ export const AboutUs = () => {
                 }
             }  
 
-            setInterval(horizontalScroll, 45);*/
+            setInterval(horizontalScroll, 45);
 
-            let scrollDirection = 1
+            /*let scrollDirection = 1
             let scrollSpeed = 1
 
             function horizontalScrollBounce() {
@@ -66,7 +66,7 @@ export const AboutUs = () => {
                 }
             }
 
-            setInterval(horizontalScrollBounce, 45);
+            setInterval(horizontalScrollBounce, 45);*/
         }
     });
         
