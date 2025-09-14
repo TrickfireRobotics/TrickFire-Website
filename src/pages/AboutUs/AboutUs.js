@@ -9,7 +9,7 @@ import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
 import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
 import { GradientLine } from '../../components/GradientLine/GradientLine'
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 const image_carousel_images = [
     { src: TeamPhoto2025, 
@@ -36,7 +36,7 @@ export const AboutUs = () => {
             
             const yearSection = document.querySelector('.year-section');
 
-            function horizontalScroll() {
+            /*function horizontalScroll() {
                 if (yearSection.scrollLeft + yearSection.clientWidth >= yearSection.scrollWidth) {
                     yearSection.scrollLeft = 0;
                 } else {
@@ -44,9 +44,9 @@ export const AboutUs = () => {
                 }
             }  
 
-            setInterval(horizontalScroll, 45);
+            setInterval(horizontalScroll, 45);*/
 
-            /*let scrollDirection = 1
+            let scrollDirection = 1
             let scrollSpeed = 1
 
             function horizontalScrollBounce() {
@@ -54,19 +54,16 @@ export const AboutUs = () => {
                     yearSection.scrollLeft += scrollSpeed;
                     if (yearSection.scrollLeft >= yearSection.scrollWidth - yearSection.clientWidth) {
                         scrollDirection = -1
-                        scrollSpeed = 10
                     }
                 } else {
-                    scrollSpeed = 5
                     yearSection.scrollLeft -= scrollSpeed;
                     if(yearSection.scrollLeft <= 0) {
                         scrollDirection = 1
-                        scrollSpeed = 1
                     }
                 }
             }
 
-            setInterval(horizontalScrollBounce, 45);*/
+            setInterval(horizontalScrollBounce, 45);
         }
     });
         

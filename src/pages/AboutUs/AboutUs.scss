@@ -6,12 +6,11 @@
     .horizontal-scroll-year-section {
         width: 100%;
         background-color: $Black;
-        margin-top: -3rem;
+        margin-top: 0rem;
     }
 
     .year-section {
-        // width: 100%;
-        width: 80%;
+        width: 85%;
         margin-right: auto;
         margin-left: auto;
         background: $Black;
@@ -49,6 +48,7 @@
     @media screen and (max-width: 768px) {
         .year-section {
             margin-top: -1rem !important;
+            padding-top: 2rem !important;
         }
         
         .year {
