@@ -22,11 +22,12 @@ const image_carousel_images = [
 export const AboutUs = () => {
     const current_year = new Date().getFullYear()
     const founding_year = 2016
-    const years = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    // const years = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    const years = []
 
-    /*for (let year = {current_year}; year >= founding_year; year--) {
+    for (let year = founding_year; year <= current_year; year++) {
         years.push(year);
-    }*/
+    }
 
     /*const yearSection = document.querySelector('.year-section');
 
