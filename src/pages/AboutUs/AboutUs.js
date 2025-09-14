@@ -9,6 +9,7 @@ import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
 import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
 import { GradientLine } from '../../components/GradientLine/GradientLine'
+import React, { useRef, useEffect } from 'react';
 
 const image_carousel_images = [
     { src: TeamPhoto2025, 
@@ -22,24 +23,53 @@ const image_carousel_images = [
 export const AboutUs = () => {
     const current_year = new Date().getFullYear()
     const founding_year = 2016
-    // const years = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
     const years = []
 
     for (let year = founding_year; year <= current_year; year++) {
         years.push(year);
     }
 
-    /*const yearSection = document.querySelector('.year-section');
+    const yearSectionRef = useRef(null);
 
-    function horizontalScroll() {
-        if (yearSection.scrollLeft + yearSection.clientWidth >= yearSection.scrollWidth) {
-            yearSection.scrollLeft = 0;
-        } else {
-            yearSection.scrollLeft += 1;
+    useEffect(() => {
+        if (yearSectionRef.current) { 
+            
+            const yearSection = document.querySelector('.year-section');
+
+            /*function horizontalScroll() {
+                if (yearSection.scrollLeft + yearSection.clientWidth >= yearSection.scrollWidth) {
+                    yearSection.scrollLeft = 0;
+                } else {
+                    yearSection.scrollLeft += 1;
+                }
+            }  
+
+            setInterval(horizontalScroll, 45);*/
+
+            let scrollDirection = 1
+            let scrollSpeed = 1
+
+            function horizontalScrollBounce() {
+                if (scrollDirection === 1) {
+                    yearSection.scrollLeft += scrollSpeed;
+                    if (yearSection.scrollLeft >= yearSection.scrollWidth - yearSection.clientWidth) {
+                        scrollDirection = -1
+                        scrollSpeed = 10
+                    }
+                } else {
+                    scrollSpeed = 5
+                    yearSection.scrollLeft -= scrollSpeed;
+                    if(yearSection.scrollLeft <= 0) {
+                        scrollDirection = 1
+                        scrollSpeed = 1
+                    }
+                }
+            }
+
+            setInterval(horizontalScrollBounce, 45);
         }
-    }
-    setInterval(horizontalScroll, 15);*/
-
+    });
+        
     return (
         <main className='about-us'>
             <ImageCarousel 
@@ -53,7 +83,7 @@ export const AboutUs = () => {
                 <MaxWidthContainer>
                     <div class="year-section">
                         {years.map((item, index) =>
-                            <div class="year" key={index}>
+                            <div class="year" key={index} ref={yearSectionRef}>
                                 <h1>{item}</h1>
                                 <div class="gradient-underline">
                                     <GradientLine />
