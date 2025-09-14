@@ -22,8 +22,10 @@ export const AboutUs = () => {
     return (
         <main className='about-us'>
             <ImageCarousel 
+                title = "Our Story"
                 images = {image_carousel_images}
                 numImages = {Object.keys(image_carousel_images).length}
+                overlay = "TrickFire Robotics is a student team at UWB currently competing in the University Rover Challenge by the Mars Society. We previously competed in NASA Lunabotics, a lunar mining competition. Over the years, TrickFire has built a strong student and alumni community."
             />
             
             <MaxWidthContainer>

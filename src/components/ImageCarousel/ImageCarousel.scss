@@ -4,7 +4,14 @@
     background-color: $Black;
     padding: 3rem 0rem;
 
-    .large-center-text {
+    .partial-screen-cover {
+        width: 85%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .large-right-text {
         color: $White;
         text-align: right;
         font-size: 5rem;
@@ -53,15 +60,25 @@
         bottom: 0.25rem;
         left: 0;
         width: 45%;
-        height: 6rem;
+        height: auto;
         padding: 0.5rem;
         margin: 0rem 3rem;
         opacity: 50%;
         overflow: scroll;
     }
 
+    @media screen and (max-width: 1200px) {
+        .overlay-text {
+            width: auto;
+        }
+    }
+
     @media screen and (max-width: 768px) {
-        .large-center-text {
+        .partial-screen-cover {
+            width: 100% !important;
+        }
+
+        .large-right-text {
             font-size: 3rem !important;
             margin-bottom: 0rem !important;
         }
