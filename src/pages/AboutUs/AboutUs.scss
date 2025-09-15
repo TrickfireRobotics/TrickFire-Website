@@ -47,8 +47,11 @@
 
     @media screen and (max-width: 768px) {
         .year-section {
+            width: auto !important;
+            margin: 0rem 3rem !important;
+            text-align: center;
+            padding-top: 1rem !important;
             margin-top: -1rem !important;
-            padding-top: 2rem !important;
         }
         
         .year {
