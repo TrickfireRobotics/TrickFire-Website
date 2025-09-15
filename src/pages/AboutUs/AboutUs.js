@@ -84,6 +84,7 @@ export const AboutUs = () => {
                                 <h1>{item}</h1>
                                 <div class="gradient-underline">
                                     <GradientLine />
+                                    <GradientLine />
                                 </div>
                             </div>
                         )}
