@@ -61,8 +61,7 @@
         width: 45%;
         height: auto;
         padding: 0.5rem;
-        opacity: 50%;
-        overflow: scroll;
+        opacity: 75%;
     }
 
     @media screen and (max-width: 1200px) {
@@ -73,28 +72,28 @@
 
     @media screen and (max-width: 768px) {
         .partial-screen-cover {
-            width: 100% !important;
+            width: 100%;
             padding: 0rem 3rem;
         }
 
         .large-right-text {
-            font-size: 3rem !important;
-            margin-bottom: 0rem !important;
+            font-size: 3rem;
+            margin-bottom: 0rem;
         }
 
         .overlay-text {
-            background-color: $Black !important;
-            position: relative !important;
-            width: 100% !important;
-            height: auto !important;
-            overflow: visible !important;
-            bottom: 0rem !important;
-            opacity: 100% !important;
-            padding: 0rem !important;
-            margin: 1rem 0rem !important;
+            background-color: $Black;
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            bottom: 0rem;
+            opacity: 100%;
+            padding: 0rem;
+            margin: 1rem 0rem;
 
             p {
-                color: $DarkWhite !important;
+                color: $DarkWhite;
             }
         }
     }

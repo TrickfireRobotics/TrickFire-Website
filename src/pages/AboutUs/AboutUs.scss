@@ -34,11 +34,11 @@
     }
 
     .year-section div:last-child {
-        color: $White !important;
-        font-style: normal !important; 
+        color: $White;
+        font-style: normal; 
 
         .gradient-underline {
-            display: block !important;
+            display: block;
         }
     }
 
@@ -48,18 +48,18 @@
 
     @media screen and (max-width: 768px) {
         .year-section {
-            width: auto !important;
-            margin: 0rem 3rem !important;
+            width: auto;
+            margin: 0rem 3rem;
             text-align: center;
-            padding-top: 1rem !important;
-            margin-top: -1rem !important;
+            padding-top: 1rem;
+            margin-top: -1rem;
         }
         
         .year {
-            margin-right: 1rem !important;
+            margin-right: 1rem;
 
             h1 {
-                font-size: 3rem !important;
+                font-size: 3rem;
             }
         }
     }
