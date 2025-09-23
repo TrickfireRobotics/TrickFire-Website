@@ -1,13 +1,87 @@
 import './AboutUs.scss'
 import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
+import { ImageCarousel } from './../../components/ImageCarousel/ImageCarousel'
 import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
+import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
+import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
+import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
+import { GradientLine } from '../../components/GradientLine/GradientLine'
+import { useRef, useEffect } from 'react';
+
+const image_carousel_images = [
+    { src: TeamPhoto2025, 
+      alt: 'Three rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue with clouds.'},
+    { src: TeamPhoto2024, 
+      alt: 'Two rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue.'},
+    { src: TeamPhoto2020, 
+      alt: 'Students stand and sit in front of a large W. Some are in TrickFire Robotics shirts. The ground is cold and wet, the sky is gray.'}
+];
 
 export const AboutUs = () => {
+    const current_year = new Date().getFullYear()
+    const founding_year = 2016
+    const years = []
+
+    for (let year = founding_year; year <= current_year; year++) {
+        years.push(year);
+    }
+
+    const yearSectionRef = useRef(null);
+
+    useEffect(() => {
+        if (yearSectionRef.current) { 
+            
+            const yearSection = document.querySelector('.year-section');
+
+            let scrollDirection = 1
+            let scrollSpeed = 1
+
+            function horizontalScrollBounce() {
+                if (scrollDirection === 1) {
+                    yearSection.scrollLeft += scrollSpeed;
+                    if (yearSection.scrollLeft >= yearSection.scrollWidth - yearSection.clientWidth) {
+                        scrollDirection = -1
+                    }
+                } else {
+                    yearSection.scrollLeft -= scrollSpeed;
+                    if(yearSection.scrollLeft <= 0) {
+                        scrollDirection = 1
+                    }
+                }
+            }
+
+            setInterval(horizontalScrollBounce, 45);
+        }
+    });
+        
     return (
         <main className='about-us'>
+            <ImageCarousel 
+                title = "Our Story"
+                images = {image_carousel_images}
+                numImages = {Object.keys(image_carousel_images).length}
+                overlay = "TrickFire Robotics is a student team at UWB currently competing in the University Rover Challenge by the Mars Society. We previously competed in NASA Lunabotics, a lunar mining competition. Over the years, TrickFire has built a strong student and alumni community."
+            />
+
+            <div class="horizontal-scroll-year-section">
+                <MaxWidthContainer>
+                    <div class="year-section">
+                        {years.map((item, index) =>
+                            <div class="year" key={index} ref={yearSectionRef}>
+                                <h1>{item}</h1>
+                                <div class="gradient-underline">
+                                    <GradientLine />
+                                    <GradientLine />
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </MaxWidthContainer>
+            </div>
+            
             <MaxWidthContainer>
                 <TextImage
                     imageOrder="image-left"
@@ -27,6 +101,7 @@ export const AboutUs = () => {
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
                 />
             </MaxWidthContainer>
+            
             <OutlinedBox
                 backgroundText='Join'
                 link='https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu'
