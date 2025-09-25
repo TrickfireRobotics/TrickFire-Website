@@ -1,0 +1,113 @@
+@import '../../variables.scss';
+
+.officer-section {
+
+    .title {
+        font-family: $font-heading;
+        font-size: 5rem;
+        color: $White;
+        font-weight: 600;
+        text-align: center;
+        padding: 3rem 0;
+
+        @media screen and (max-width: 768px) {
+            font-size: 3.2rem;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+
+        .tab {
+            font-family: $font-heading;
+            font-weight: 600;
+            font-size: 2rem;
+            color: $White;
+            cursor: pointer;
+            padding-bottom: 0.5rem;
+            position: relative;
+            background: none;
+            border: none;
+            outline: none;
+            padding-bottom: 0.25em;
+
+            &.active::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                background-image: linear-gradient(to right,
+                        $TrickFireGreen,
+                        $AccentPink );
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .mobile-tabs {
+        display: none;
+        position: relative;
+        padding: 3rem;
+
+        .active-tab {
+            font-family: $font-heading;
+            font-weight: 600;
+            width: 100%;
+            text-align: left;
+            font-size: 2rem;
+            font-weight: 600;
+            background: none;
+            border: none;
+            color: $White;
+            padding-bottom: 0.25rem;
+            cursor: pointer;
+
+            .arrow {
+                margin-left: 1rem;
+            }
+        }
+
+        .dropdown {
+            display: flex;
+            flex-direction: column;
+            background: $EerieBlack;
+
+            button {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                color: $White;
+                font-size: 2rem;
+                font-family: $font-heading;
+                font-weight: 600;
+                background: none;
+                border: none;
+                text-align: left;
+                cursor: pointer;
+
+                &:hover {
+                    background: rgba($White, 0.1);
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .officer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
