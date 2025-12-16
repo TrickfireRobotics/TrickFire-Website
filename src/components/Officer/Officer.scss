@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.officer-box {
+    position: relative;
+    display: inline-block;
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        padding: 0.5rem;
+        background-color: rgba($White, 0.75);
+    }
+
+    p {
+        user-select: none;
+    }
+
+    .officer-name {
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        color: $Black;
+        text-transform: uppercase;
+        font-weight: 600;
+        z-index: 5;
+    }
+
+    .officer-position {
+        font-family: $font-body;
+        font-size: 1rem;
+        color: $Black;
+        text-transform: capitalize;
+        font-weight: 400;
+        z-index: 5;
+    }
+}
