@@ -3,10 +3,12 @@ import { TextImage } from './../../components/TextImage/TextImage'
 import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidthContainer'
 import March2025Outreach from '../../assets/Homepage/march2025Outreach.jpeg'
 import MarketingTeam from '../../assets/Homepage/marketingTeam.png'
+import { Hero } from '../../components/Hero/Hero'
 
 export const Homepage = () => {
     return (
         <main className='homepage'>
+            <Hero/>
             <MaxWidthContainer>
                 <TextImage 
                     imageOrder="image-right"
