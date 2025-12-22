@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.event {
+    width: 100%;
+    background-color: $EerieBlack;
+    border: solid white 1px;
+    display: flex;
+
+    .event-image-column {
+        padding: 1rem 0.25rem;
+        padding-right: 1rem;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        background-color: #111;
+        
+        .event-image-container {
+            width: 90%;
+            height: auto;   
+
+            .box-shadow-image {
+                width: 100%;
+            }
+        }
+    }
+
+    .event-text-column {
+        padding: 2rem 1.75rem;
+        width: 70%;
+
+        .event-title {
+            font-size: 3rem;
+            color: $White;
+            padding-bottom: 0.25rem;
+        }
+
+        .event-time {
+            font-family: Overpass;
+            color: $DarkWhite;
+            padding: 0.5rem 0;
+            font-size: 1.15rem;
+        }
+
+        .event-description {
+            color: $DarkWhite;
+            padding: 1rem 0;
+            font-size: 1.15rem;
+            min-height: 10rem;
+        }
+
+        .event-link-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+
+        .event-image-column{
+            width: 100%;
+        }
+
+        .event-text-column{
+            width: 100%;
+        }
+    }
+}
