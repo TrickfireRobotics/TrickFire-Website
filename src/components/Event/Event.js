@@ -1,4 +1,5 @@
 import './Event.scss'
+import { PortableText } from '@portabletext/react'
 import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 import { GradientLine } from '../GradientLine/GradientLine'
 import { Button } from '../Button/Button'
@@ -16,13 +17,13 @@ export const Event = ({img, altDescription, title, timeDescription, description,
                 <h2 className='event-title'>{title}</h2>
                 <h3 className='event-time'>{timeDescription}</h3>
                 <GradientLine/>
-                <p className='event-description'>{description}</p>
+                <div className='event-description'><PortableText value = {description}/></div>
                 <div className='event-link-container'>
-                    {links.map(link => {
+                    {links?.map(link => {
                         return <Button 
-                                 isSubpageLink={true} 
-                                 link={link.link} 
-                                 buttonText={link.buttonText}
+                                 isLink={true} 
+                                 link={link.href} 
+                                 buttonText={link.name}
                                />
                     })}
                 </div>

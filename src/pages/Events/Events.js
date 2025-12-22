@@ -2,40 +2,20 @@ import './Events.scss'
 import {GradientLine} from '../../components/GradientLine/GradientLine'
 import {MaxWidthContainer} from '../../components/MaxWidthContainer/MaxWidthContainer'
 import { Event } from '../../components/Event/Event'
-import ExampleImage from '../../assets/AboutUs/teamPhoto2024.jpg'
+import { useState, useEffect } from 'react'
+import { client, urlFor } from '../../assets/SanityClient'
+
 
 export const Events = () => {
+    const [events, setEvents] = useState([]);
 
-    const events = [
-        {
-            img: ExampleImage,
-            altDescription: 'Example',
-            title: 'Event',
-            timeDescription: 'DD MM YYYY - HH MM',
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            date: new Date(),
-            links: [
-                {
-                    link: 'www.google.com',
-                    buttonText: 'Text'
-                }
-            ]
-        },
-        {
-            img: ExampleImage,
-            altDescription: 'Example',
-            title: 'Event',
-            timeDescription: 'DD MM YYYY - HH MM',
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            date: new Date(),
-            links: [
-                {
-                    link: 'www.google.com',
-                    buttonText: 'Text'
-                }
-            ]
-        }
-    ]
+    useEffect(() => {
+      window.scrollTo({top: 0, behavior: "instant" });
+
+      client.fetch(`*[_type == "events"] | order(formattedDate asc)`)
+        .then(data => setEvents(data))
+        .catch(err => console.log(err));
+    }, []);
 
     return (
         <main className='events'>
@@ -49,17 +29,23 @@ export const Events = () => {
             <section className='events-section'>
                 <MaxWidthContainer>
                     <div className='events-list'>
-                        {events.map(event => {
+                        {events?.length !== 0 ? (events.map(event => {
                             return <Event 
-                                     img={event.img} 
-                                     altDescription={event.altDescription} 
-                                     title={event.title} 
-                                     timeDescription={event.timeDescription}
-                                     description={event.description}
-                                     date={event.date}
-                                     links={event.links}
+                                     img={urlFor(event.img).auto('format').url()} 
+                                     altDescription={event?.altDescription} 
+                                     title={event?.title} 
+                                     timeDescription={event?.timeDescription}
+                                     description={event?.description}
+                                     date={event?.date}
+                                     links={event?.links}
                                    />
-                        })}
+                        })) : (
+                            <div className='empty-state-container'>
+                                <h2 className='empty-state-text'>
+                                    No upcoming events right now — check back soon!
+                                </h2>
+                            </div>
+                        )}
                     </div>
                 </MaxWidthContainer>
             </section>

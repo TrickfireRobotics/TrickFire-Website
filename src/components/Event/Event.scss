@@ -12,7 +12,7 @@
         width: 35%;
         display: flex;
         justify-content: center;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         background-color: #111;
         
         .event-image-container {
@@ -30,19 +30,22 @@
         width: 70%;
 
         .event-title {
-            font-size: 2rem;
+            font-size: 3rem;
             color: $White;
+            padding-bottom: 0.25rem;
         }
 
         .event-time {
             font-family: Overpass;
-            color: $White;
-            padding: 0.25rem 0;
+            color: $DarkWhite;
+            padding: 0.5rem 0;
+            font-size: 1.15rem;
         }
 
         .event-description {
             color: $DarkWhite;
-            padding: 0.75rem 0;
+            padding: 1rem 0;
+            font-size: 1.15rem;
             min-height: 10rem;
         }
 

@@ -6,7 +6,7 @@ const smoothScroll = () => window.scrollTo({top: 0, behavior: 'smooth'})
 
 export const Button = (props) => {
 
-    console.log(props.isLink)
+    console.log(props)
 
     return (        
         <div class="button-component">

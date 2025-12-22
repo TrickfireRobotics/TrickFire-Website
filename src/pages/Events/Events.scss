@@ -9,12 +9,13 @@
 
         .events-header {
             color: $White;
-            font-size: 2rem;
+            font-size: 3rem;
             line-height: 150%;
         }
 
         .page-head-text {
             color: $DarkWhite;
+            font-size: 1.15rem;
             padding-top: 2rem;
         }
     }
@@ -34,5 +35,27 @@
             display: flex;
             flex-direction: column;
         }
+    }
+
+    .empty-state-container {
+        background-color: $EerieBlack;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        border: white 1px solid;
+
+        .empty-state-text {
+            color: $White;
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .events-section {
+            .events-list {
+                padding: 3rem; 
+            }
+        }   
     }
 }
