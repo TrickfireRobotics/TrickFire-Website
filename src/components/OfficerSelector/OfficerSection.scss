@@ -22,6 +22,7 @@
 
         .tab {
             font-family: $font-heading;
+            font-weight: 600;
             font-size: 2rem;
             color: $White;
             cursor: pointer;
@@ -56,9 +57,11 @@
         padding: 3rem;
 
         .active-tab {
+            font-family: $font-heading;
+            font-weight: 600;
             width: 100%;
             text-align: left;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 600;
             background: none;
             border: none;
@@ -77,9 +80,12 @@
             background: $EerieBlack;
 
             button {
-                padding-top: 1rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
                 color: $White;
-                font-size: 1.5rem;
+                font-size: 2rem;
+                font-family: $font-heading;
+                font-weight: 600;
                 background: none;
                 border: none;
                 text-align: left;

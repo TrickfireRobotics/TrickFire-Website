@@ -5,6 +5,8 @@ import { ImageCarousel } from './../../components/ImageCarousel/ImageCarousel'
 import { OutlinedBox } from '../../components/OutlinedBox/OutlinedBox'
 import Rover2025 from '../../assets/AboutUs/rover2025.jpeg'
 import RoverUnveiling2025 from '../../assets/AboutUs/roverUnveiling2025.jpeg'
+import ClaytonImage from '../../assets/AboutUs/Clayton.png'
+import { OfficerSection } from '../../components/OfficerSelector/OfficerSection'
 import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
 import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
@@ -110,6 +112,20 @@ export const AboutUs = () => {
                 isLink={true}
                 text='Our team consists of smaller specialized subteams that all contribute to the rover at large. Members can join multiple teams and work on several different projects covering a variety of disciplines. No previous experience is needed to join! New members are onboarded on a rolling basis.'
             />
+            <MaxWidthContainer>
+                <OfficerSection
+                    allOfficers={[
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Allison', position: 'vice president', image: ClaytonImage },
+                        { type: 'team', name: 'Aaron', position: 'mission control', image: ClaytonImage },
+                        { type: 'officer', name: 'Ella', position: 'secretary', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
+                    ]}
+                />
+            </MaxWidthContainer>
         </main>
     )
 }
