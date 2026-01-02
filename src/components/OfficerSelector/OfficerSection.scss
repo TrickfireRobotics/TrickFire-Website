@@ -1,5 +1,16 @@
 @import '../../variables.scss';
 
+@keyframes gridSlideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .officer-section {
 
     .title {
@@ -54,7 +65,7 @@
     .mobile-tabs {
         display: none;
         position: relative;
-        padding: 3rem;
+        padding: 0 3rem;
 
         .active-tab {
             font-family: $font-heading;
@@ -109,5 +120,10 @@
         justify-content: center;
         padding-top: 3rem;
         padding-bottom: 3rem;
+        flex-basis: 3rem;
+        animation: gridSlideUpFadeIn 0.5s ease-out;
+        max-height: 2000px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
     }
 }

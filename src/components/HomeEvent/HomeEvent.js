@@ -1,0 +1,75 @@
+import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
+import { GradientLine } from '../GradientLine/GradientLine'
+import placeholderImage from '../../assets/Homepage/eventPlaceholder.png'
+import {MaxWidthContainer} from '../MaxWidthContainer/MaxWidthContainer'
+import { urlFor } from '../../assets/SanityClient'
+import './HomeEvent.scss'
+import { client } from '../../assets/SanityClient'
+import { useState, useEffect } from 'react'
+import { Button } from '../Button/Button'
+
+export const HomeEvent = () => {
+
+    const [event, setEvent] = useState(null);
+    
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: "instant" });
+
+        client.fetch(`*[_type == "events"] | order(formattedDate asc)[0]`)
+        .then(data => setEvent(data))
+        .catch(err => console.log(err));
+    }, []);
+
+    console.log(event);
+
+    return (
+        <div className='home-event'>
+            <MaxWidthContainer>
+                <div className='content-container'>
+                    {event ? (
+                        <div className='event-container'>
+                            <BoxShadowImage 
+                                className='event-image' 
+                                imageSource={event?.img ? urlFor(event.img).auto('format').url() : placeholderImage} 
+                                alternativeText={event.img?.alt || event.altDescription || "Event image"}
+                            />
+                            <div className='event-info-container'>
+                                <h2 className='event-title'>{event.title}</h2>
+                                <p className='event-time'>{event.timeDescription}</p>
+                                <GradientLine/>
+                                <Button 
+                                    isSubpageLink={true}
+                                    link={"/Events"} 
+                                    buttonText={"Events"}
+                                />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className='event-container'>
+                            <BoxShadowImage
+                                className='event-image'
+                                imageSource={placeholderImage}
+                                alternativeText='TrickFire presentation event'
+                            />
+                            <div className='event-info-container'>
+                                <h2 className='event-title'>No Upcoming Events</h2>
+                                <p className='event-time'>Check back soon for upcoming events!</p>
+                                <GradientLine/>
+                                <Button 
+                                    isSubpageLink={true}
+                                    link={"/Events"} 
+                                    buttonText={"Events"}
+                                />
+                            </div>
+                        </div>
+                    )}
+                    <div className='text-container'>
+                        <h2 className='section-title'>Events</h2>
+                        <GradientLine/>
+                        <p className='section-text'>TrickFire's events and workshops are a great way to learn more about our work and gain new skills.</p>
+                    </div>
+                </div>
+            </MaxWidthContainer>
+        </div>
+    )
+}

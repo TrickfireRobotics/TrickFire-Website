@@ -1,10 +1,11 @@
 @import '../../variables.scss';
 
 .button-component {
+
     button {
-    background-color: $TrickFireGreen;
-    padding: 0.65rem;
-    border: none;
+        background-color: $TrickFireGreen;
+        padding: 0.65rem;
+        border: none;
 
         a {
             font-family: $font-heading;

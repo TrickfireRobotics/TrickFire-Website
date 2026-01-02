@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 const smoothScroll = () => window.scrollTo({top: 0, behavior: 'smooth'})
 
 export const Button = (props) => {
-
-    console.log(props)
-
     return (        
         <div class="button-component">
             {props.isLink && <button><a href={props.link} target="_blank" rel="noreferrer">{props.buttonText} →</a></button>}
