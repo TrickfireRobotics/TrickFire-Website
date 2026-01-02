@@ -36,7 +36,8 @@
         }
 
         .event-time {
-            font-family: Overpass;
+            text-transform: uppercase;
+            font-weight: bold;
             color: $DarkWhite;
             padding: 0.5rem 0;
             font-size: 1.15rem;

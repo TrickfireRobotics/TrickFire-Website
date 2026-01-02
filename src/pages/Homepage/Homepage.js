@@ -4,6 +4,7 @@ import { MaxWidthContainer } from './../../components/MaxWidthContainer/MaxWidth
 import March2025Outreach from '../../assets/Homepage/march2025Outreach.jpeg'
 import MarketingTeam from '../../assets/Homepage/marketingTeam.png'
 import { Hero } from '../../components/Hero/Hero'
+import { HomeEvent } from '../../components/HomeEvent/HomeEvent'
 
 export const Homepage = () => {
     return (
@@ -22,7 +23,9 @@ export const Homepage = () => {
                     imageSource={MarketingTeam}
                     alternativeText="Four students pose excitedly outside a building." 
                 />
-
+            </MaxWidthContainer>
+            <HomeEvent/>
+            <MaxWidthContainer>
                 <TextImage 
                     imageOrder="image-right"
                     subheader="Join Us" 

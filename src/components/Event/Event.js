@@ -15,7 +15,7 @@ export const Event = ({img, altDescription, title, timeDescription, description,
             </div>
             <div className='event-text-column'>
                 <h2 className='event-title'>{title}</h2>
-                <h3 className='event-time'>{timeDescription}</h3>
+                <p className='event-time'>{timeDescription}</p>
                 <GradientLine/>
                 <div className='event-description'><PortableText value = {description}/></div>
                 <div className='event-link-container'>

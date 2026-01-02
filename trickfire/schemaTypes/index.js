@@ -1,3 +1,4 @@
-import { eventType } from "./EventTypes";
+import { eventType } from "./EventType";
+import { officerType } from "./OfficerType";
 
-export const schemaTypes = [eventType];
+export const schemaTypes = [eventType, officerType];

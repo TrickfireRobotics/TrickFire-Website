@@ -2,6 +2,7 @@ import './OfficerSection.scss'
 import { Officer } from '../Officer/Officer';
 import { useState } from 'react'
 import { GradientLine } from '../GradientLine/GradientLine';
+import { urlFor } from '../../assets/SanityClient';
 
 /**
  * @component
@@ -24,6 +25,8 @@ export const OfficerSection = (props) => {
         { key: 'team', label: 'TEAM LEADS' },
         { key: 'mission', label: 'MISSION DIRECTORS' },
     ];
+
+    console.log(props.allOfficers);
 
     // Filter officers by the current tab
     const displayedOfficers = props.allOfficers.filter(
@@ -72,11 +75,11 @@ export const OfficerSection = (props) => {
                 )}
             </div>
             { /* Grid of Officer Images */}
-            <div className='officer-grid'>
+            <div className='officer-grid' key={activeTab}>
                 {displayedOfficers.map((officer, i) => (
                     <Officer
                         key={i}
-                        image={officer.image}
+                        image={urlFor(officer.image).auto('format').url()}
                         name={officer.name}
                         position={officer.position}
                     />

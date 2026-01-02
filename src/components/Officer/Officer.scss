@@ -1,8 +1,22 @@
 @import '../../variables.scss';
 
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .officer-box {
     position: relative;
     display: inline-block;
+    aspect-ratio: 1/1;
+    width: 20%;
+    animation: slideUpFadeIn 0.6s ease-out;
 
     .image {
         width: 100%;
@@ -40,5 +54,11 @@
         text-transform: capitalize;
         font-weight: 400;
         z-index: 5;
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    .officer-box {
+        width: 80%;
     }
 }

@@ -10,8 +10,9 @@ import { OfficerSection } from '../../components/OfficerSelector/OfficerSection'
 import TeamPhoto2020 from '../../assets/AboutUs/teamPhoto2020.jpg'
 import TeamPhoto2024 from '../../assets/AboutUs/teamPhoto2024.jpg'
 import TeamPhoto2025 from '../../assets/AboutUs/teamPhoto2025.jpeg'
+import { client, urlFor } from '../../assets/SanityClient'
 import { GradientLine } from '../../components/GradientLine/GradientLine'
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const image_carousel_images = [
     { src: TeamPhoto2025, 
@@ -23,6 +24,7 @@ const image_carousel_images = [
 ];
 
 export const AboutUs = () => {
+    const [officers, setOfficers] = useState([]);
     const current_year = new Date().getFullYear()
     const founding_year = 2016
     const years = []
@@ -32,6 +34,12 @@ export const AboutUs = () => {
     }
 
     const yearSectionRef = useRef(null);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "officers"]`)
+            .then(data => setOfficers(data))
+            .catch(err => console.log(err));
+    }, [])
 
     useEffect(() => {
         if (yearSectionRef.current) { 
@@ -114,16 +122,7 @@ export const AboutUs = () => {
             />
             <MaxWidthContainer>
                 <OfficerSection
-                    allOfficers={[
-                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
-                        { type: 'officer', name: 'Allison', position: 'vice president', image: ClaytonImage },
-                        { type: 'team', name: 'Aaron', position: 'mission control', image: ClaytonImage },
-                        { type: 'officer', name: 'Ella', position: 'secretary', image: ClaytonImage },
-                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
-                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
-                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
-                        { type: 'officer', name: 'Clayton', position: 'president', image: ClaytonImage },
-                    ]}
+                    allOfficers={officers}
                 />
             </MaxWidthContainer>
         </main>
