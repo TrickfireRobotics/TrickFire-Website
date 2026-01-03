@@ -4,9 +4,12 @@ import { Footer } from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 /**
- * Layout container component that places the footer and navbar at the top and bottom of the page.
  * @component
+ * 
+ * Layout container component that places the footer and navbar at the top and bottom of the page.
+ * @returns {JSX.Element}
  */
+
 export const Layout = () => {
     return (
         <div className='layout'>

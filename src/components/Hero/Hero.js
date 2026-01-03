@@ -5,20 +5,20 @@ import { Button } from '../Button/Button.js'
 import { MaxWidthContainer } from '../MaxWidthContainer/MaxWidthContainer.js'
 
 /**
- * Hero component for the Homepage.
+ * @returns Hero component for the Homepage.
  */
 export const Hero = () => {
     return (
         <div className='hero'>
-            <img src={roverOnRock} className='background-image'/>
+            <img src={roverOnRock} alt="Viator rover" className='background-image'/>
 
             <MaxWidthContainer>
-                <img src={watermelonDragon} className='watermelonDragon'/>
+                <img src={watermelonDragon} alt="Watermelon dragon mascot" className='watermelonDragon'/>
                 <div className='text'>
                     <h1 className='title'>TrickFire Robotics</h1>
                     <p className='subtitle'>Developing future engineers, developers, and marketers in the world of competitive robotics</p>
                 </div>
-                <Button isSubpageLink={true} link="get-involved" isLink={false} buttonText="Get Involved" className='button'/>
+                <Button type="internal" link="get-involved" buttonText="Get Involved" className='button'/>
             </MaxWidthContainer>
         </div>
     )

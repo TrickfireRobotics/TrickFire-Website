@@ -6,16 +6,24 @@ import { urlFor } from '../../assets/SanityClient';
 
 /**
  * @component
- *
- * This component renders the full officer section, including the selector and grid of officers.
- *
- * @param {string} props.name - The name that will be displayed over the officer's photo.
- * @param {string} props.position - The position that officer holds within the club.
- * @param {string} props.photo - The photo that will be displayed in the main box.
- * @param {string} props.type - The type of officer this person is, and which tab they will appear under.
+ * 
+ * Renders the complete officer section with tabbed navigation and officer grid.
+ * 
+ * This component displays officers organized by type (Officers, Discipline Leads, Team Leads, Mission Directors).
+ * It includes desktop tab navigation and a mobile dropdown selector.
+ * 
+ * @param {Array<Object>} allOfficers - Array of officer objects from Sanity
+ * @param {string} allOfficers[].name - The officer's name
+ * @param {string} props.allOfficers[].position - The officer's position/title
+ * @param {Object} props.allOfficers[].image - The officer's image object (Sanity image)
+ * @param {('officer'|'discipline'|'team'|'mission')} props.allOfficers[].type - Officer category for filtering
  * @returns {JSX.Element}
+ * 
+ * @example
+ * // Usage with officers data from Sanity
+ * <OfficerSection allOfficers={officers} />
  */
-export const OfficerSection = (props) => {
+export const OfficerSection = ({allOfficers}) => {
     const [activeTab, setActiveTab] = useState('officer');
     const [isDropDownactive, setIsDropdownActive] = useState(false);
 
@@ -26,10 +34,8 @@ export const OfficerSection = (props) => {
         { key: 'mission', label: 'MISSION DIRECTORS' },
     ];
 
-    console.log(props.allOfficers);
-
     // Filter officers by the current tab
-    const displayedOfficers = props.allOfficers.filter(
+    const displayedOfficers = allOfficers.filter(
         (officer) => officer.type === activeTab
     );
 

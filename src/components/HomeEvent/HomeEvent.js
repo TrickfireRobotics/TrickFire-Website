@@ -8,8 +8,13 @@ import { client } from '../../assets/SanityClient'
 import { useState, useEffect } from 'react'
 import { Button } from '../Button/Button'
 
+/**
+ * @component
+ * 
+ * Component for the Homepage that fetches and displays information on the most recent event
+ * @returns {JSX.Element}
+ */
 export const HomeEvent = () => {
-
     const [event, setEvent] = useState(null);
     
     useEffect(() => {
@@ -20,13 +25,12 @@ export const HomeEvent = () => {
         .catch(err => console.log(err));
     }, []);
 
-    console.log(event);
-
     return (
         <div className='home-event'>
             <MaxWidthContainer>
                 <div className='content-container'>
                     {event ? (
+                        /** Event Display */
                         <div className='event-container'>
                             <BoxShadowImage 
                                 className='event-image' 
@@ -38,13 +42,14 @@ export const HomeEvent = () => {
                                 <p className='event-time'>{event.timeDescription}</p>
                                 <GradientLine/>
                                 <Button 
-                                    isSubpageLink={true}
+                                    type="internal"
                                     link={"/Events"} 
                                     buttonText={"Events"}
                                 />
                             </div>
                         </div>
                     ) : (
+                        /** Empty State */
                         <div className='event-container'>
                             <BoxShadowImage
                                 className='event-image'
@@ -56,7 +61,7 @@ export const HomeEvent = () => {
                                 <p className='event-time'>Check back soon for upcoming events!</p>
                                 <GradientLine/>
                                 <Button 
-                                    isSubpageLink={true}
+                                    type="internal"
                                     link={"/Events"} 
                                     buttonText={"Events"}
                                 />
