@@ -1,4 +1,3 @@
-import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 import { GradientLine } from '../GradientLine/GradientLine'
 import placeholderImage from '../../assets/Homepage/eventPlaceholder.png'
 import {MaxWidthContainer} from '../MaxWidthContainer/MaxWidthContainer'
@@ -7,6 +6,7 @@ import './HomeEvent.scss'
 import { client } from '../../assets/SanityClient'
 import { useState, useEffect } from 'react'
 import { Button } from '../Button/Button'
+import { BoxShadowImage } from '../BoxShadowImage/BoxShadowImage'
 
 /**
  * @component
@@ -32,11 +32,13 @@ export const HomeEvent = () => {
                     {event ? (
                         /** Event Display */
                         <div className='event-container'>
-                            <BoxShadowImage 
-                                className='event-image' 
-                                imageSource={event?.img ? urlFor(event.img).auto('format').url() : placeholderImage} 
-                                alternativeText={event.img?.alt || event.altDescription || "Event image"}
-                            />
+                            <div className='event-image-wrapper'>
+                                <BoxShadowImage
+                                    className='event-image' 
+                                    imageSource={event?.img ? urlFor(event.img).auto('format').url() : placeholderImage} 
+                                    altText={event.img?.alt || event.altDescription || "Event image"}
+                                />
+                            </div>
                             <div className='event-info-container'>
                                 <h2 className='event-title'>{event.title}</h2>
                                 <p className='event-time'>{event.timeDescription}</p>
@@ -51,11 +53,13 @@ export const HomeEvent = () => {
                     ) : (
                         /** Empty State */
                         <div className='event-container'>
-                            <BoxShadowImage
-                                className='event-image'
-                                imageSource={placeholderImage}
-                                alternativeText='TrickFire presentation event'
-                            />
+                            <div className='event-image-wrapper'>
+                                <img
+                                    className='event-image'
+                                    src={placeholderImage}
+                                    alt='TrickFire presentation event'
+                                />
+                            </div>
                             <div className='event-info-container'>
                                 <h2 className='event-title'>No Upcoming Events</h2>
                                 <p className='event-time'>Check back soon for upcoming events!</p>

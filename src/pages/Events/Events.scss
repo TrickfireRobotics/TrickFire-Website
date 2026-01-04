@@ -5,7 +5,7 @@
     background-color: $EerieBlack;
 
     .page-head {
-        padding: 3rem;
+        padding: 5vw;
 
         .events-header {
             color: $White;
@@ -55,7 +55,9 @@
     @media screen and (max-width: 768px) {
         .events-section {
             .events-list {
-                padding: 3rem; 
+                padding: 3rem 0;
+                margin: auto;
+                width: 85%; 
             }
         }   
     }
