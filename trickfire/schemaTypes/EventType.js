@@ -34,7 +34,7 @@ export const eventType = defineType({
           name: 'timeDescription',
           type: 'string',
           title: 'Time Description (Optional)',
-          description: 'Enter the time of the event in whatever format fits best (e.g. "August 20-22, starting at 6:00 PM PST each day").',
+          description: 'Enter the time of the event in any format that fits best (e.g. "August 20-22, starting at 6:00 PM PST each day").',
         },
         {
           name: 'formattedDate',
@@ -53,7 +53,7 @@ export const eventType = defineType({
             validation: Rule => Rule.required().error('Image is required'),
         }),
         defineField({
-            name: 'altDescription',
+            name: 'altText',
             title: 'Image Description',
             description: 'Include a description of the image for those who use screen readers.',
             type: 'string',
