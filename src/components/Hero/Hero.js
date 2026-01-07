@@ -10,10 +10,10 @@ import { MaxWidthContainer } from '../MaxWidthContainer/MaxWidthContainer.js'
 export const Hero = () => {
     return (
         <div className='hero'>
-            <img src={roverOnRock} className='background-image'/>
+            <img src={roverOnRock} className='background-image' alt="Rover background"/>
 
             <MaxWidthContainer>
-                <img src={watermelonDragon} className='watermelonDragon'/>
+                <img src={watermelonDragon} className='watermelonDragon' alt="Watermelon dragon mascot"/>
                 <div className='text'>
                     <h1 className='title'>TrickFire Robotics</h1>
                     <p className='subtitle'>Developing future engineers, developers, and marketers in the world of competitive robotics</p>
