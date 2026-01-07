@@ -8,9 +8,9 @@ import EmailLogo from '../../assets/Footer/EmailLogo.png'
 /**
  * Data object for a social link in the footer.
  * @typedef {Object} SocialLink
- * @property {*} img - Logo to display in the footer. Must be an imported image module
+ * @property {Object} img - Logo to display in the footer. Must be an imported image module
  * @property {string} url - Full link to resource (e.g. 'https://www.linkedin.com/company/trickfire-robotics/')
- * @property {string} alt - Logo description for accessibility  
+ * @property {string} name - Logo description for accessibility  
  */
 
 /** 
@@ -21,21 +21,21 @@ export const links = [
     {
         img: EmailLogo,
         url: 'mailto:tfrbtcs@uw.edu',
-        alt: 'Email logo',
+        name: 'Email',
     },
     {
         img: LinkedInLogo,
         url: 'https://www.linkedin.com/company/trickfire-robotics/',
-        alt: 'LinkedIn logo'
+        name: 'LinkedIn'
     },
     {
         img: InstagramLogo,
         url: 'https://www.instagram.com/trickfirerobotics/?hl=en',
-        alt: 'Instagram logo',
+        name: 'Instagram',
     },
     {
         img: YoutubeLogo,
         url: 'https://www.youtube.com/@trickfirerobotics5781',
-        alt: 'Youtube logo',
+        name: 'Youtube',
     },
 ];

@@ -30,9 +30,10 @@ export const Events = () => {
                 <MaxWidthContainer>
                     <div className='events-list'>
                         {events?.length !== 0 ? (events.map(event => {
-                            return <Event 
+                            return <Event
+                                     key={event?.title} 
                                      img={urlFor(event.img).auto('format').url()} 
-                                     altDescription={event?.altDescription} 
+                                     altText={event?.altText} 
                                      title={event?.title} 
                                      timeDescription={event?.timeDescription}
                                      description={event?.description}

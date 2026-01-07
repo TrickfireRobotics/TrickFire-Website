@@ -6,8 +6,10 @@ import { links } from './Links'
 const date = new Date();
 
 /** 
- * Footer component that renders the social media links and copyright information.
  * @component
+ * 
+ * Footer component that renders the social media links and copyright information.
+ * @returns {JSX.Element}
 */
 export const Footer = () => {
     return (
@@ -21,9 +23,10 @@ export const Footer = () => {
                                 <a 
                                 className='social-link'
                                 href={link.url}
+                                aria-label={"Go to " + link.name}
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                    <img src={link.img} alt={link.alt}/>
+                                    <img src={link.img} alt={link.name + " logo"}/>
                                 </a>
                             </li>
                             )

@@ -15,11 +15,11 @@ import { useRef, useEffect, useState } from 'react';
 
 const image_carousel_images = [
     { src: TeamPhoto2025, 
-      alt: 'Three rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue with clouds.'},
+      altText: 'Three rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue with clouds.'},
     { src: TeamPhoto2024, 
-      alt: 'Two rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue.'},
+      altText: 'Two rows of students standing outside in front of a large W. Lush green plants to either side, the sky is blue.'},
     { src: TeamPhoto2020, 
-      alt: 'Students stand and sit in front of a large W. Some are in TrickFire Robotics shirts. The ground is cold and wet, the sky is gray.'}
+      altText: 'Students stand and sit in front of a large W. Some are in TrickFire Robotics shirts. The ground is cold and wet, the sky is gray.'}
 ];
 
 export const AboutUs = () => {
@@ -75,13 +75,13 @@ export const AboutUs = () => {
                 overlay = "TrickFire Robotics is a student team at UWB currently competing in the University Rover Challenge by the Mars Society. We previously competed in NASA Lunabotics, a lunar mining competition. Over the years, TrickFire has built a strong student and alumni community."
             />
 
-            <div class="horizontal-scroll-year-section">
+            <div className="horizontal-scroll-year-section">
                 <MaxWidthContainer>
-                    <div class="year-section">
+                    <div className="year-section">
                         {years.map((item, index) =>
-                            <div class="year" key={index} ref={yearSectionRef}>
+                            <div className="year" key={index} ref={yearSectionRef}>
                                 <h1>{item}</h1>
-                                <div class="gradient-underline">
+                                <div className="gradient-underline">
                                     <GradientLine />
                                     <GradientLine />
                                 </div>
@@ -104,7 +104,7 @@ export const AboutUs = () => {
                 <TextImage
                     imageOrder="image-right"
                     subheader="Our Disciplines"
-                    text={["TrickFire Robotics is composed of students from a variety of majors with business and technical interests.   ", <ul><br></br><li>Software Engineering</li><li>Mechanical Engineering</li><li>Electrical Engineering</li><li>Science</li><li>Marketing</li><li>Finance</li></ul>]}
+                    text={["TrickFire Robotics is composed of students from a variety of majors with business and technical interests.   ", <div><br></br><ul><li>Software Engineering</li><li>Mechanical Engineering</li><li>Electrical Engineering</li><li>Science</li><li>Marketing</li><li>Finance</li></ul></div>]}
                     showButton={false}
                     imageSource={Rover2025}
                     alternativeText="A rover with multicolored wheels on a sidewalk in front of plants and a brick wall. "
@@ -115,8 +115,7 @@ export const AboutUs = () => {
                 backgroundText='Join'
                 link='https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0i7wGfH_Ef9MlM3y37_kRLpUMEVVSDJTTFFOU0RNOEhNVVYyWUI2TjdOTyQlQCN0PWcu'
                 buttonText='Join Us!'
-                isSubpageLink={false}
-                isLink={true}
+                buttonType='external'
                 text='Our team consists of smaller specialized subteams that all contribute to the rover at large. Members can join multiple teams and work on several different projects covering a variety of disciplines. No previous experience is needed to join! New members are onboarded on a rolling basis.'
             />
             <MaxWidthContainer>

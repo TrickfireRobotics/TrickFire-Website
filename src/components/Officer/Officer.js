@@ -10,13 +10,13 @@ import './Officer.scss'
  * @param {string} props.photo - the photo that will be displayed in the main box.
  * @returns {JSX.Element}
  */
-export const Officer = (props) => {
+export const Officer = ({image, name, position}) => {
     return (
         <div className='officer-box'>
-            <img className='image' src={props.image} alt={props.name} />
+            <img className='image' src={image} alt={name} />
             <div className='overlay'>
-                <p className='officer-name'>{props.name}</p>
-                <p className='officer-position'>{props.position}</p>
+                <p className='officer-name'>{name}</p>
+                <p className='officer-position'>{position}</p>
             </div>
         </div>
     );
