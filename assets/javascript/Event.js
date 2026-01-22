@@ -21,12 +21,13 @@ const events = [
     image: "assets/images/photos/LuncheonBanner.jpg",
   },
   {
-    date: "Spring 2025",
+    date: "Spring 2026",
     time: "",
     title: "TrickFire Robotics Rover Unveiling",
     location: "ARC Overlook (Top Floor)",
     tags: ["Rover Demo", "Free Food"],
-    description: "TrickFire is showcasing its rover to UWB and our supporters. Invite your friends, family, and mentors to eat pizza and more, learn about the club, and see the rover in action! Club alumni also are invited. Network! All UWB and Cascadia students are welcome.",
+    description:
+      "TrickFire is showcasing its rover to UWB and our supporters. Invite your friends, family, and mentors to eat pizza and more, learn about the club, and see the rover in action! Club alumni also are invited. Network! All UWB and Cascadia students are welcome.",
     image: "assets/images/photos/RoverReveal.png",
   },
   {
@@ -52,12 +53,12 @@ function parseEventDateTime(event) {
   const dateParts = event.date.replace(/(\d+)(st|nd|rd|th)/, "$1").split(" ");
   const now = new Date();
   const currentYear = now.getFullYear();
-  
+
   let validDateString = "Jan 1 2025"; // Default fallback
-  
+
   if (dateParts.length < 3) {
     console.warn("Season format detected for:", event.date);
-    
+
     if (dateParts[1] == "Winter") {
       validDateString = `Dec 21 ${currentYear}`;
     } else if (dateParts[1] == "Spring") {
@@ -83,7 +84,6 @@ function parseEventDateTime(event) {
   return new Date(`${validDateString} ${eventStartTime}`);
 }
 
-
 //Helper factory function we use to create elements. Note: please specify an empty string if you need a future parameter but not the current one.
 function createElement(tag, className, text = "", src = "", alt = "") {
   const element = document.createElement(tag);
@@ -106,7 +106,7 @@ function createDeskTopEventCard(event) {
     "event",
     "",
     event.image,
-    "Event Image"
+    "Event Image",
   );
   imageContainer.appendChild(eventImage);
 
@@ -118,7 +118,7 @@ function createDeskTopEventCard(event) {
     "clock",
     "",
     "assets/images/icons/clock.svg",
-    "Clock icon"
+    "Clock icon",
   );
   const dateText = createElement("h3", "", event.date);
   dateDiv.appendChild(clockImg);
@@ -142,7 +142,7 @@ function createDeskTopEventCard(event) {
     "waypoint",
     "",
     "assets/images/icons/waypoint.png",
-    "Waypoint icon"
+    "Waypoint icon",
   );
   const locationText = createElement("h3", "", event.location);
   locationDiv.appendChild(locationImg);
@@ -183,7 +183,7 @@ function createMobileEventCard(event) {
     "event",
     "",
     event.image,
-    "Event Image"
+    "Event Image",
   );
 
   // Creating the container for the title and time
@@ -196,7 +196,7 @@ function createMobileEventCard(event) {
     "clock",
     "",
     "assets/images/icons/clock.svg",
-    "Clock icon"
+    "Clock icon",
   );
   const dateText = createElement("h3", "", event.date);
   dateDiv.appendChild(clockImg);
@@ -245,7 +245,7 @@ function addEventCards() {
       eventContainer.appendChild(eventCard);
     }
   });
-};
+}
 
 // Function to handle slider
 function initSlider() {
