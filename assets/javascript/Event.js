@@ -23,7 +23,7 @@ const events = [
   {
     date: "Spring 2026",
     time: "",
-    title: "TrickFire Robotics Rover Unveiling",
+    title: "Rover Unveiling",
     location: "ARC Overlook (Top Floor)",
     tags: ["Rover Demo", "Free Food"],
     description:
