@@ -1,20 +1,16 @@
 @import '../../variables.scss';
 
 .button-component {
-
     button {
         background-color: $TrickFireGreen;
         padding: 0.65rem 1rem;
         border: none;
-
-        a {
-            font-family: $font-heading;
-            color: $Black;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 1.5rem;
-        }
+        font-family: $font-heading;
+        color: $Black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
 
     button:hover {
