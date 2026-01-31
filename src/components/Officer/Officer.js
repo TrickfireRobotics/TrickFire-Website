@@ -13,7 +13,7 @@ import './Officer.scss'
 export const Officer = ({image, name, position}) => {
     return (
         <div className='officer-box'>
-            <img className='image' src={image} alt={name} />
+            <img className='image' src={image} alt={name} draggable="false"/>
             <div className='overlay'>
                 <p className='officer-name'>{name}</p>
                 <p className='officer-position'>{position}</p>
