@@ -13,7 +13,7 @@ export const Hero = () => {
             <img src={roverOnRock} alt="Viator rover" className='background-image'/>
 
             <MaxWidthContainer>
-                <img src={watermelonDragon} alt="Watermelon dragon mascot" className='watermelonDragon'/>
+                <img src={watermelonDragon} alt="Watermelon dragon mascot" className='watermelonDragon' draggable="false"/>
                 <div className='text'>
                     <h1 className='title'>TrickFire Robotics</h1>
                     <p className='subtitle'>Developing future engineers, developers, and marketers in the world of competitive robotics</p>

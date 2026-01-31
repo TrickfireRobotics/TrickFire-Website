@@ -7,6 +7,10 @@
     justify-content: center;
     height: 80vh;
     padding: 0 3rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
 
     .max-width-container {
         display: flex;
