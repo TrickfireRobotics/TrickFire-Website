@@ -9,7 +9,7 @@ import { HomeEvent } from '../../components/HomeEvent/HomeEvent'
 export const Homepage = () => {
     return (
         <main className='homepage'>
-            <meta name="description" content="Familiarize yourself with TrickFire Robotics and the competition we compete in. Learn about the majors our teams support, our student leaders, and how to get involved." />
+            <meta name="description" content="TrickFire Robotics is an interdisciplinary student team at the University of Washington Bothell competing in the University Rover Challenge, an international competition challenging students to design and develop rovers relevant to future Mars exploration." />
 
             <Hero/>
             <MaxWidthContainer>

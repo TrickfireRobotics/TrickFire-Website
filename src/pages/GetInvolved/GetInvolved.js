@@ -10,7 +10,7 @@ const disciplines = ['Software Engineering', 'Mechanical Engineering', 'Electric
 export const GetInvolved = () => {
     return (
         <main className='get-involved'>
-            <meta name="description" content="Get involved with our team! TrickFire Robotics draws a talented field of students from a variety of majors. We consider anyone considering joining to give it a chance, and accept new members on a rolling basis." />
+            <meta name="description" content="Get involved with our team! TrickFire Robotics draws a talented field of students from a variety of majors. We encourage anyone considering joining to give it a chance, and accept new members on a rolling basis." />
 
             <MaxWidthContainer>
                 <TextImage
