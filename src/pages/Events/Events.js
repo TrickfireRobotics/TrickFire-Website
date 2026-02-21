@@ -19,7 +19,7 @@ export const Events = () => {
 
     return (
         <main className='events'>
-            <meta name="description" content="Add description here." />
+            <meta name="description" content="Learn more about upcoming events TrickFire Robotics is involved in, both on campus and in our community." />
 
             <MaxWidthContainer>
                 <section className='page-head'>

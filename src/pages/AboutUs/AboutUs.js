@@ -68,7 +68,7 @@ export const AboutUs = () => {
         
     return (
         <main className='about-us'>
-            <meta name="description" content="Add description here." />
+            <meta name="description" content="TrickFire Robotics is an interdisciplinary student team at the University of Washington Bothell competing in the University Rover Challenge, an international competition challenging students to design and develop rovers relevant to future Mars exploration." />
 
             <ImageCarousel 
                 title = "Our Story"

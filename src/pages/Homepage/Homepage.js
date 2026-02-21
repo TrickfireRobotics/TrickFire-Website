@@ -9,7 +9,7 @@ import { HomeEvent } from '../../components/HomeEvent/HomeEvent'
 export const Homepage = () => {
     return (
         <main className='homepage'>
-            <meta name="description" content="Add description here." />
+            <meta name="description" content="Familiarize yourself with TrickFire Robotics and the competition we compete in. Learn about the majors our teams support, our student leaders, and how to get involved." />
 
             <Hero/>
             <MaxWidthContainer>
