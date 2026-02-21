@@ -9,6 +9,8 @@ import { HomeEvent } from '../../components/HomeEvent/HomeEvent'
 export const Homepage = () => {
     return (
         <main className='homepage'>
+            <meta name="description" content="Add description here." />
+
             <Hero/>
             <MaxWidthContainer>
                 <TextImage 

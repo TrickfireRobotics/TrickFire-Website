@@ -10,6 +10,8 @@ const disciplines = ['Software Engineering', 'Mechanical Engineering', 'Electric
 export const GetInvolved = () => {
     return (
         <main className='get-involved'>
+            <meta name="description" content="Add description here." />
+
             <MaxWidthContainer>
                 <TextImage
                     imageOrder="image-left"

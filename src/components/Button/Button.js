@@ -30,8 +30,8 @@ export const Button = ({type = 'default', link, buttonText, onClick}) => {
     
     return (        
         <div className="button-component">
-            {type === 'external' && <button aria-label={`${buttonText}, opens in a new tab`}><a href={link} target="_blank" rel="noreferrer">{buttonText} →</a></button>}
-            {type === 'internal' && <button aria-label={`Navigate to ${buttonText}`}><Link to={link} onClick={smoothScroll}>{buttonText} →</Link></button>}
+            {type === 'external' && <a href={link} target="_blank" rel="noreferrer"><button aria-label={`${buttonText}, opens in a new tab`}>{buttonText} →</button></a>}
+            {type === 'internal' && <Link to={link} onClick={smoothScroll}><button aria-label={`Navigate to ${buttonText}`}>{buttonText} →</button></Link>}
             {type === 'default' && <button aria-label={buttonText} onClick={onClick}>{buttonText}</button>}
         </div>
     )

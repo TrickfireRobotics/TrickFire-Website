@@ -68,6 +68,8 @@ export const AboutUs = () => {
         
     return (
         <main className='about-us'>
+            <meta name="description" content="Add description here." />
+
             <ImageCarousel 
                 title = "Our Story"
                 images = {image_carousel_images}

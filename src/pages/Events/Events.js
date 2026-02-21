@@ -19,6 +19,8 @@ export const Events = () => {
 
     return (
         <main className='events'>
+            <meta name="description" content="Add description here." />
+
             <MaxWidthContainer>
                 <section className='page-head'>
                     <h2 className='events-header'>Events</h2>
