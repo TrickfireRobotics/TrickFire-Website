@@ -1,5 +1,6 @@
 import "./GetInvolved.scss";
 import { TextImage } from "./../../components/TextImage/TextImage";
+import { OpportunitiesSection } from "../../components/OpportunitiesSection/OpportunitiesSection";
 import { MaxWidthContainer } from "./../../components/MaxWidthContainer/MaxWidthContainer";
 import { OutlinedBox } from "../../components/OutlinedBox/OutlinedBox";
 import { PageSEO } from "../../components/PageSEO/PageSEO";
@@ -51,18 +52,7 @@ export const GetInvolved = () => {
           />
         </MaxWidthContainer>
 
-        <div className="opportunities-section">
-          <MaxWidthContainer>
-            <h1 className="large-italic-center">Opportunities In...</h1>
-            <div className="discipline-list">
-              {disciplines.map((item, index) => (
-                <div className="discipline" key={index}>
-                  <h1>{item}</h1>
-                </div>
-              ))}
-            </div>
-          </MaxWidthContainer>
-        </div>
+        <OpportunitiesSection disciplines={disciplines} />
 
         <MaxWidthContainer>
           <TextImage
@@ -81,7 +71,7 @@ export const GetInvolved = () => {
         <OutlinedBox
           backgroundText="CONTACT"
           link="mailto:tfrbtcs@uw.edu"
-          buttonText="Contact Us!"
+          buttonText="Email Us!"
           buttonType="external"
           text="If you are interested in mentoring the team, having us demo or display our rover at an event, or have any other questions for TrickFire Robotics, please get in touch!"
         />
