@@ -1,40 +1,39 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .outlined-box {
-    background-color: $EerieBlack;
-    padding: 2rem;
-    outline: 1px solid $White;
-    min-height: 13rem;
-    width: auto;
-    margin: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+  background-color: $EerieBlack;
+  padding: 2rem;
+  outline: 1px solid hsla(0, 0%, 100%, 40%);
+  min-height: 13rem;
+  width: auto;
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 
-    .text {
-        font-family: $font-body;
-        font-size: 1.1rem;
-        color: $DarkWhite;
-        font-weight: 400;
-        flex: 1;
-        min-width: 0;
-    }
+  .text {
+    font-family: $font-body;
+    font-size: 1.1rem;
+    color: $DarkWhite;
+    font-weight: 400;
+    flex: 1;
+    min-width: 0;
+  }
 
-    .button {
-        flex-shrink: 0;
-        flex-grow: 0;
-    }
+  .button {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .outlined-box {
-        flex-direction: column;
-        align-items: flex-start;
+  .outlined-box {
+    flex-direction: column;
+    align-items: flex-start;
 
-        .button {
-            margin-top: 1rem;
-        }
+    .button {
+      margin-top: 1rem;
     }
-
+  }
 }

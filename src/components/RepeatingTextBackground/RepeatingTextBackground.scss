@@ -1,29 +1,28 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .repeating-text-background {
-    background-color: $Black;
-    outline: 1px solid $White;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    min-height: 22rem;
-    user-select: none;
+  background-color: $Black;
+  outline: 1px solid hsla(0, 0%, 100%, 40%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 22rem;
+  user-select: none;
 
-    .repeat-text-item {
-        white-space: nowrap;
-        color: $EerieBlack;
-        font-family: $font-heading;
-        font-weight: bold;
-        font-style: italic;
-        text-transform: uppercase;
-        font-size: 3.5rem;
-        position: absolute;
+  .repeat-text-item {
+    white-space: nowrap;
+    color: $EerieBlack;
+    font-family: $font-heading;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    position: absolute;
+  }
 
-    }
-
-    .repeat-text-item:nth-child(even) {
-        transform: translateX(3rem);
-    }
+  .repeat-text-item:nth-child(even) {
+    transform: translateX(3rem);
+  }
 }
