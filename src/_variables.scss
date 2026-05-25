@@ -1,31 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Overpass:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Overpass:wght@300;400;600;700&display=swap");
 
 // Fonts
-$font-heading: 'Barlow Condensed', sans-serif;
-$font-body: 'Overpass', sans-serif;
+$font-heading: "Barlow Condensed", sans-serif;
+$font-body: "Overpass", sans-serif;
 
 // Colors
-$TrickFireGreen: #00FE00;
-$AccentPink: #E93CAC;
+$TrickFireGreen: #00fe00;
+$AccentPink: #e93cac;
 $EerieBlack: #222222;
-$DarkWhite: #CCCCCC;
-$White: #FFFFFF;
+$DarkWhite: #cccccc;
+$White: #ffffff;
 $Black: #000000;
 
 // Default Stylings
 * {
-    box-sizing: border-box;
-    position: relative;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 p {
-    font-family: $font-body;
+  font-family: $font-body;
 }
 
-h1, h2, h3 {
-    font-family: $font-heading;
-    text-transform: uppercase;
-    font-weight: 600;
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  text-transform: uppercase;
+  font-weight: 700;
 }

@@ -1,4 +1,9 @@
-import './Officer.scss'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./Officer.scss";
+
+gsap.registerPlugin(ScrollTrigger);
 
 /**
  * @component
@@ -10,14 +15,38 @@ import './Officer.scss'
  * @param {string} props.photo - the photo that will be displayed in the main box.
  * @returns {JSX.Element}
  */
-export const Officer = ({image, name, position}) => {
-    return (
-        <div className='officer-box'>
-            <img className='image' src={image} alt={name} />
-            <div className='overlay'>
-                <p className='officer-name'>{name}</p>
-                <p className='officer-position'>{position}</p>
-            </div>
-        </div>
-    );
+export const Officer = ({ image, name, position }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        {
+          opacity: 0,
+          y: -10,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 60%",
+            once: true,
+          },
+        },
+      );
+    }
+  }, [image]);
+
+  return (
+    <div ref={cardRef} className="officer-box">
+      <img className="image" src={image} alt={name} />
+      <div className="overlay">
+        <p className="officer-name">{name}</p>
+        <p className="officer-position">{position}</p>
+      </div>
+    </div>
+  );
 };
