@@ -49,7 +49,7 @@ export const Events = () => {
                       altText={event?.altText}
                       title={event?.title}
                       timeDescription={event?.timeDescription}
-                      locationDescription={event?.eventDescription}
+                      locationDescription={event?.locationDescription}
                       description={event?.description}
                       date={event?.date}
                       links={event?.links}

@@ -87,7 +87,7 @@ export const Event = ({
         <h2 className="event-title">{title}</h2>
         {timeDescription && (
           <div className="event-time">
-            <img src={CalendarIcon} alt="Location Icon" />
+            <img src={CalendarIcon} alt="Calendar Icon" />
             <p className="event-time-text">{timeDescription}</p>
           </div>
         )}
