@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1117e74d.css",
+    "main.js": "/static/js/main.0565dc6d.js",
+    "static/js/796.86d22fba.chunk.js": "/static/js/796.86d22fba.chunk.js",
+    "static/js/165.3bdef1dc.chunk.js": "/static/js/165.3bdef1dc.chunk.js",
+    "static/js/453.e66fa15b.chunk.js": "/static/js/453.e66fa15b.chunk.js",
+    "static/media/roverOnRock.png": "/static/media/roverOnRock.75a8421249539631a6f8.png",
+    "static/media/marketingTeam.png": "/static/media/marketingTeam.73c0ae7f42d49c0b73e4.png",
+    "static/media/clubFair.jpeg": "/static/media/clubFair.6d16186c38e7600508c6.jpeg",
+    "static/media/march2025Outreach.jpeg": "/static/media/march2025Outreach.f8f53b0ba6ca9e8e5cb4.jpeg",
+    "static/media/teamPhoto2025.jpeg": "/static/media/teamPhoto2025.6849f730de19acc49ced.jpeg",
+    "static/media/roverUnveiling2025.jpeg": "/static/media/roverUnveiling2025.ab44e7639f12141ce1d5.jpeg",
+    "static/media/rover2025.jpeg": "/static/media/rover2025.9f639c93f32d37afde44.jpeg",
+    "static/media/eventPlaceholder.png": "/static/media/eventPlaceholder.fe582edf2fc25969d37a.png",
+    "static/media/teamPhoto2024.jpg": "/static/media/teamPhoto2024.bd1ff67cfd744703736d.jpg",
+    "static/media/labWithArm.webp": "/static/media/labWithArm.8ca1a2abf8a050ceac2d.webp",
+    "static/media/teamPhoto2020.jpg": "/static/media/teamPhoto2020.59140f76aa73fc555437.jpg",
+    "static/media/WatermelonDragon.png": "/static/media/WatermelonDragon.72fa947e2821bd7e27c8.png",
+    "static/media/TrickFireLogo.png": "/static/media/TrickFireLogo.6f77bc662c366695da92.png",
+    "static/media/EventCalendar.svg": "/static/media/EventCalendar.8f9854fe8b49f413a3312145488a3793.svg",
+    "index.html": "/index.html",
+    "static/media/EventLocation.svg": "/static/media/EventLocation.e248776deecbf40cbc6588d142fa4103.svg",
+    "main.1117e74d.css.map": "/static/css/main.1117e74d.css.map",
+    "main.0565dc6d.js.map": "/static/js/main.0565dc6d.js.map",
+    "796.86d22fba.chunk.js.map": "/static/js/796.86d22fba.chunk.js.map",
+    "165.3bdef1dc.chunk.js.map": "/static/js/165.3bdef1dc.chunk.js.map",
+    "453.e66fa15b.chunk.js.map": "/static/js/453.e66fa15b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1117e74d.css",
+    "static/js/main.0565dc6d.js"
+  ]
+}
