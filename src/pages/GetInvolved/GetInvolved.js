@@ -62,7 +62,7 @@ export const GetInvolved = () => {
             showButton={true}
             buttonType="external"
             link="mailto:tfrbtcs@uw.edu"
-            buttonText="Sponsor Us!"
+            buttonText="Email Us!"
             imageSource={LabWithArm}
             alternativeText="Three people, all in dark tops, observing a robotic arm on a wooden table."
           />
