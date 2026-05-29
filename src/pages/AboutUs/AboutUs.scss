@@ -1,0 +1,66 @@
+@import '../../variables.scss';
+
+.about-us {
+    background-color: $EerieBlack;
+
+    .horizontal-scroll-year-section {
+        width: 100%;
+        background-color: $Black;
+        margin-top: 0rem;
+    }
+
+    .year-section {
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        background: $Black;
+        display: flex;
+        padding-bottom: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        .year {
+            color: $DarkWhite;
+            font-size: 3rem;
+            font: $font-heading;
+            display: inline;
+            font-style: italic;
+            margin: 0rem 1.5rem;
+
+            .gradient-underline {
+                display: none;
+            }
+        }
+    }
+
+    .year-section div:last-child {
+        color: $White;
+        font-style: normal; 
+
+        .gradient-underline {
+            display: block;
+        }
+    }
+
+    .year-section::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .year-section {
+            width: auto;
+            margin: 0rem 3rem;
+            text-align: center;
+            padding-top: 1rem;
+            margin-top: -1rem;
+        }
+        
+        .year {
+            margin-right: 1rem;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}

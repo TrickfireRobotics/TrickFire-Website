@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+.box-shadow-image {
+    border: 4px solid $EerieBlack;
+    box-shadow: 0.9rem 0.9rem $TrickFireGreen;
+    transition: transform 0.3s ease-in-out;
+}

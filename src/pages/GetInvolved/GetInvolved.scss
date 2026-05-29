@@ -1,0 +1,70 @@
+@import "../../variables.scss";
+
+.get-involved {
+  background-color: $EerieBlack;
+
+  .opportunities-section {
+    background-color: $Black;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-top: 1px solid hsla(0, 0%, 100%, 40%);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 40%);
+
+    .large-italic-center {
+      color: $White;
+      text-align: center;
+      font-size: 5rem;
+      font-style: italic;
+      font-family: $font-heading;
+    }
+
+    .discipline-list {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      text-align: center;
+      width: 80%;
+
+      .discipline {
+        display: inline-block;
+        border: 0.3rem solid $DarkWhite;
+        box-shadow: 0.5rem 0.5rem $AccentPink;
+        padding: 0.5rem;
+        margin: 1rem 1rem;
+
+        h1 {
+          color: $DarkWhite;
+          text-align: center;
+          font-family: $font-heading;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .large-italic-center {
+      font-size: 3rem !important;
+    }
+
+    .discipline-list {
+      h1 {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    .discipline {
+      display: block !important;
+      margin: 2rem 1rem !important;
+
+      h1 {
+        font-size: 1.25rem !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .large-italic-center {
+      font-size: 2rem !important;
+    }
+  }
+}

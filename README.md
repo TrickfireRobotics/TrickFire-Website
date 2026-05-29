@@ -1,52 +1,47 @@
-# TrickfireRobotics.github.io
+# TrickFire Robotics Website
 
-Trickfire Robotics Club Website is coded in plain HTML, Bootstrap 4 and SCSS
+Welcome to the TrickFire Robotics' website! This is a React application.
 
-Hosted on trickfirerobotics.org and .com redirects to it
+## Running the App in Development Mode
 
-# Getting started
+To start the development server:
 
-It is recommended to use **Visual Studio Code** as your text editor
-
-1. After installing VS Code, download the Live Sass Complier extension [(Tutorial 0:26-1:35)](https://youtu.be/ms6ca5w3Qjk?t=26)
-
-1. In VS Code, open the command palette (Ctrl-Shift-P) and type "Preferences: Open Settings (JSON)"
-
-1. Paste this in your JSON file:
-
-```JSON
-{
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "savePath": "/assets/css"
-        }
-    ],
-    "liveSassCompile.settings.generateMap": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-}
+```bash
+npm install
+npm start
 ```
 
-# Q&A
+This will:
 
-### What if I just want to suggest changes to the text/images on the website?
+- Install all dependencies.
+- Run the app in development mode at [http://localhost:3000](http://localhost:3000).
 
-> Contact the current maintainers about the changes. If you want to do it anonymously, use this [form](https://forms.office.com/Pages/ResponsePage.aspx?id=W9229i_wGkSZoBYqxQYL0l2s9_fTgfJAq7u6aZSNf2pUREZIMk1QRExVWVJMTVFMTFM0R1IxRTJOWC4u)
+The page will reload automatically when you make changes. Lint errors will appear in the console.
 
-### Who owns/has access to the domain?
+## Project File Structure
 
-> Currently Michael V, a past member owns it but eventually will migrate to the team. However, it doesn't look like @uw.edu emails can own google domains, so Adam C and Vlad K currently have access to the Google Domain with their personal emails.
+```
+TrickfireRobotics.github.io/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+├── README.md
+└── ...
+```
 
-### Who pays for the domain?
+- `public/`: Static files and the main HTML template.
+- `src/`: React components and application logic.
+- `components/`: Reused components across the project.
+- `pages/`: React page components. Each is given their own folder with the JS and SCSS file respectively.
+- `app.js`: Routes with each of the pages corresponding to url routes.
+- `package.json`: Project metadata and dependencies.
+- `README.md`: Project documentation.
 
-> Michael V paid until around April and the team probably will need to pay the $24 per year for both domains going forward
-
-# Current Maintainers
-
-| **Name** | **GitHub** | **Discord** |
-| -------- | ---------- | ----------- |
-| Vlad K   | VladFigy   | Figy#6626   |
-| Adam C   | adamseth2  | " "#7664    |
-|          |            |             |
-
-Last Updated: March 7 2022
+Maintained by [Aaron Quashnock](https://github.com/Quashnock). Open an issue or pull request if you'd like to contribute.
