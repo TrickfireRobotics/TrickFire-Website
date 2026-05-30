@@ -5,34 +5,25 @@
     <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
-      // Only redirect valid routes
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script handles routing for SPAs on GitHub Pages
 
       var l = window.location;
-      var validRoutes = ["/", "/about-us", "/events", "/get-involved"];
-
-      // Extract the path without trailing slashes for comparison
-      var pathname = l.pathname.endsWith("/")
-        ? l.pathname.slice(0, -1)
-        : l.pathname;
-      if (pathname === "") pathname = "/";
-
-      // Check if this is a valid route
-      if (validRoutes.includes(pathname)) {
-        // If we're not at root, redirect to the root with the path as a query parameter
-        if (l.pathname !== "/" && !l.pathname.endsWith(".html")) {
-          var pathAndQuery =
-            l.pathname.slice(1) + (l.search ? "&" + l.search.slice(1) : "");
-          window.location.replace(
-            l.protocol +
-              "//" +
-              l.host +
-              "/?redirect=" +
-              encodeURIComponent("/" + pathAndQuery) +
-              l.hash,
-          );
-        }
+      if (l.pathname !== "/" && !l.pathname.endsWith(".html")) {
+        // If we're not at root and not accessing a specific file,
+        // redirect to the root with the path as a query parameter
+        var pathAndQuery =
+          l.pathname.slice(1) + (l.search ? "&" + l.search.slice(1) : "");
+        window.location.replace(
+          l.protocol +
+            "//" +
+            l.host +
+            "/?redirect=" +
+            encodeURIComponent("/" + pathAndQuery) +
+            l.hash,
+        );
       }
-      // Otherwise, leave as 404 (do nothing)
     </script>
   </head>
   <body></body>
