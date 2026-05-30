@@ -7,30 +7,23 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      // This script takes the current url and converts the path and query
-      // string into just a query string, and then redirects the browser
-      // to the new url with only a query string and hash fragment,
-      // e.g. https://www.example.com/one/two?a=3 becomes
-      // https://www.example.com/?/one/two&a=3
-      // Note: this 404.html file must be at least 512 bytes for it to work
-      // with Internet Explorer (it is currently > 512 bytes)
+      // This script handles routing for SPAs on GitHub Pages
 
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash,
-          );
-        }
-      })(window.location);
+      var l = window.location;
+      if (l.pathname !== "/" && !l.pathname.endsWith(".html")) {
+        // If we're not at root and not accessing a specific file,
+        // redirect to the root with the path as a query parameter
+        var pathAndQuery =
+          l.pathname.slice(1) + (l.search ? "&" + l.search.slice(1) : "");
+        window.location.replace(
+          l.protocol +
+            "//" +
+            l.host +
+            "/?redirect=" +
+            encodeURIComponent("/" + pathAndQuery) +
+            l.hash,
+        );
+      }
     </script>
   </head>
   <body></body>
