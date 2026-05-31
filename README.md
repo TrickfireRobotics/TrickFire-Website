@@ -2,6 +2,12 @@
 
 Welcome to the TrickFire Robotics' website! This is a React application that uses [Sanity](https://www.sanity.io/) as a headless CMS to manage events and officer information.
 
+## Adding Events and Officers
+
+Follow the Sanity guide below if you are looking to add an Event or Officer using Sanity:
+
+[Adding Events and Officers Sanity Guide](https://github.com/TrickfireRobotics/TrickFire-Website/wiki/Adding-Events-and-Officers)
+
 ## Running the App in Development Mode
 
 To start the development server:
