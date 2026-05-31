@@ -1,6 +1,6 @@
 # TrickFire Robotics Website
 
-Welcome to the TrickFire Robotics' website! This is a React application that uses [Sanity](https://www.sanity.io/) as a headless CMS to manage events and officer information.
+TrickFire Robotics Club website is coded in React and uses the Sanity CMS to easily manage events and officer information.
 
 ## Adding Events and Officers
 
@@ -77,9 +77,8 @@ TrickfireRobotics.github.io/
 
 ### Deploying the React App
 
-The website is deployed using GitHub pages with the gh-pages. For organizational purposes, only
-deploy the website using the following command on the most recently updated Master branch
-when changes are made.
+The website is deployed using GitHub pages with the gh-pages. For organizational purposes, the master branch
+is the main deployment branch and this command should only be used on this branch with the most recent changes.
 
 To deploy:
 
@@ -100,12 +99,12 @@ npm run deploy
 
 This will deploy the updated schema to your Sanity project.
 
-### Deployment Checklist
+### Deployment Steps
 
-- [ ] Update schema types in `trickfire/schemaTypes/` if needed
-- [ ] Deploy schema changes: `cd trickfire && npm run deploy`, and select "TrickFireSanity"
-- [ ] Test changes locally: `npm start` and verify content appears correctly
-- [ ] Build and deploy the React app: `npm run deploy`
-- [ ] Verify the live site at [https://trickfirerobotics.com](https://trickfirerobotics.com)
+1. Update schema types in `trickfire/schemaTypes/` if needed
+2. Deploy schema changes: `cd trickfire && npm run deploy`, and select "TrickFireSanity"
+3. Test changes locally: `npm start` and verify content appears correctly
+4. Build and deploy the React app: `npm run deploy`
+5. Verify the live site at [https://trickfirerobotics.com](https://trickfirerobotics.com)
 
-Maintained by [Aaron Quashnock](https://github.com/Quashnock). Open an issue or pull request if you'd like to contribute.
+Maintained by [Aaron Quashnock](https://github.com/Quashnock). Let me know if you need help or want to make a change!
