@@ -62,14 +62,14 @@ TrickfireRobotics.github.io/
 ```
 
 - `public/`: Static files and the main HTML template.
-  - `404.html`: Custom 404 page with SPA routing for valid routes.
+    - `404.html`: Custom 404 page with SPA routing for valid routes.
 - `src/`: React components and application logic.
-  - `components/`: Reused components across the project. Each folder contains the JS and SCSS files.
-  - `pages/`: React page components. Each folder contains the JS and SCSS files.
-  - `assets/`: Asset files for each page including the Sanity client configuration.
-  - `App.js`: Routes with each of the pages corresponding to url routes.
+    - `components/`: Reused components across the project. Each folder contains the JS and SCSS files.
+    - `pages/`: React page components. Each folder contains the JS and SCSS files.
+    - `assets/`: Asset files for each page including the Sanity client configuration.
+    - `App.js`: Routes with each of the pages corresponding to url routes.
 - `trickfire/`: Sanity CMS studio and schema definitions.
-  - `schemaTypes/`: Schema type definitions for content (Events, Officers).
+    - `schemaTypes/`: Schema type definitions for content (Events, Officers).
 - `package.json`: Project metadata and dependencies.
 - `README.md`: Project documentation.
 
