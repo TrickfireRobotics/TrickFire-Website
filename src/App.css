@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Overpass:wght@300;400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --font-heading: "Barlow Condensed", sans-serif;
+    --font-body: "Overpass", sans-serif;
+
+    --color-trickfire-green: #00fe00;
+    --color-accent-pink: #e93cac;
+    --color-eerie-black: #222222;
+    --color-dark-white: #cccccc;
+
+    --animate-wiggle: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(15deg) translateX(0);
+    }
+    25% {
+        transform: rotate(18deg) translateX(-3px);
+    }
+    50% {
+        transform: rotate(15deg) translateX(0);
+    }
+    75% {
+        transform: rotate(12deg) translateX(3px);
+    }
+    100% {
+        transform: rotate(15deg) translateX(0);
+    }
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+    }
+
+    p {
+        font-family: var(--font-body);
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    html,
+    body {
+        background-color: var(--color-eerie-black);
+    }
+}
+
+@layer components {
+    /* Navbar active/hover underline. A pseudo-element + sibling-state combo that's clearer
+       as plain CSS than as a wall of arbitrary Tailwind variants. */
+    .subpage-link {
+        @apply relative font-heading text-2xl font-semibold text-white uppercase no-underline;
+    }
+
+    .subpage-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.25rem;
+        background-color: white;
+        opacity: 0;
+        transform: translateY(5px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .subpage-link:not(.active):hover::after {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+
+    .subpage-link.active::after {
+        opacity: 1;
+        background-image: linear-gradient(
+            to right,
+            var(--color-trickfire-green),
+            var(--color-accent-pink)
+        );
+    }
+
+    /* Footer social icon hover animation. */
+    @keyframes footer-icon-shadow {
+        0% {
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        }
+        100% {
+            filter: drop-shadow(4px 4px 0 var(--color-accent-pink))
+                drop-shadow(-4px -4px 0 var(--color-trickfire-green));
+        }
+    }
+
+    .social-list-item {
+        @apply h-10 list-none;
+    }
+
+    /* One-off decorative shadow stack for the homepage hero title. */
+    .hero-title {
+        text-shadow:
+            1px 1px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 0 0 black,
+            -1px 0 0 black,
+            0 1px 0 black,
+            0 -1px 0 black,
+            4px 4px 0 var(--color-accent-pink),
+            -4px -4px 0 var(--color-trickfire-green);
+    }
+
+    .social-list-item:hover {
+        @apply scale-110;
+    }
+
+    .social-list-item img {
+        @apply h-full transition-[filter] duration-600 ease-in-out;
+    }
+
+    .social-list-item:hover img {
+        animation: footer-icon-shadow 0.6s ease-in-out forwards;
+    }
+
+    @media (max-width: 768px), (prefers-reduced-motion: reduce) {
+        .social-list-item {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+}
